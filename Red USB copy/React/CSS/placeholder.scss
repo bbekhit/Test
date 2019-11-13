@@ -1,0 +1,50 @@
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #666;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #666;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #666;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #666;
+}
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+@mixin placeholder($color, $size:"") {
+  &::-webkit-input-placeholder {
+    color: $color;
+    @if $size != "" {
+      font-size: $size;
+    }
+  }
+  &:-moz-placeholder {
+    color: $color;
+    @if $size != "" {
+      font-size: $size;
+    }
+  }
+  &::-moz-placeholder {
+    color: $color;
+    @if $size != "" {
+      font-size: $size;
+    }
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    @if $size != "" {
+      font-size: $size;
+    }
+  }
+}
+
+// Use placeholder mixin (the size parameter is optional)
+[placeholder] {
+  @include placeholder(red, 10px);
+}

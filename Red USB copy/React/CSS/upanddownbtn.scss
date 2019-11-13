@@ -1,0 +1,18 @@
+.myIcon {
+  margin-left: 5px;
+  animation: bounce 4s infinite;
+  -webkit-animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(5px);
+  }
+}

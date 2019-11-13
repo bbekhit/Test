@@ -1,0 +1,58 @@
+
+
+body{
+    background:url(images/gym.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Supermercado One', cursive;
+    
+
+    
+}
+
+
+/*to add a texture:background-image
+search google for background images--images--tools--icon
+png are mostly transperent photos and i know it from dots*/
+
+
+.box{
+    border:1px solid green;
+    background-color: orange;
+    color:grey;
+    width:45%;
+    margin:0 auto;
+    text-align: center;
+    margin-top: 200px;
+    border-radius: 20px;
+    font-size:1em;
+   
+   
+}
+
+button{
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:1em;
+    margin-bottom:5px;
+    border:1px solid green;
+}
+
+i{
+    color:orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

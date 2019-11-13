@@ -1,0 +1,26 @@
+.outer {
+  height: 800px;
+  width: 800px;
+  /* top: 0;
+  left: 20; */
+  margin: 80px auto;
+  border: 1px solid purple;
+  /* position: fixed; */
+}
+
+.wrapper {
+  border: 1px solid green;
+  height: 30%;
+  width: 30%;
+  margin: 75px auto;
+  /* position: absolute; */
+}
+
+.showRelative {
+  width: 50%;
+  height: 50%;
+  border: 1px solid red;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}

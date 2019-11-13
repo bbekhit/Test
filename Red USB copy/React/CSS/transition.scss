@@ -1,0 +1,8 @@
+.btn{
+    transition:background 2s ease-in-out, border-radius 2s ease-in-out 1;
+    &:hover{
+        background:red;
+        border-radius:50%
+    }
+}
+

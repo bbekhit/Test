@@ -1,0 +1,99 @@
+/* <h1 class="lg-heading"><h1> */
+
+h1,
+h2,
+h3 {
+  color: red;
+  font-size: 25px;
+  &.lg-heading {
+    font-weight: 400;
+  }
+}
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+// <div className="login">
+// <h1>Login</h1>
+// <div className="secondary">
+//   <h1>Hello</h1>
+// </div>
+// <InputField />
+// </div>
+
+
+.login {
+  width: 500px;
+  margin: 150px auto;
+
+  h1 {
+    color: $pink-color;
+    &:hover {
+      color: green;
+    }
+  }
+
+  input {
+    border: 5px solid $pink-color;
+  }
+
+  .secondary h1 {
+    color: blue;
+  }
+}
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+html{
+  font-size:62%  //or 10px
+}
+
+// so then we can use rem in base of 10 like 2.2rem === 22px
+
+*{
+  box-sizing:border-box;
+}
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+h1{
+  background: rgba(lighten($primary-color,2), 0.5)
+} 
+//to make it transparent
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+@mixin easeOut {
+  transition: all 5s ease-out;
+  @include easeOut;
+}
+h1 {
+  color: $pink-color;
+  &:hover {
+    color: green;
+   
+  }
+}
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+// Nesting
+
+// <div className="main">
+//     <a>
+//       <i className="icon"></i>
+//     </a>
+// </div>
+
+.main{
+  color:red;
+ 
+  a{
+    color:blue
+     .icon{
+       color:green
+       &:hover{
+         color:pink
+       }
+     }
+
+  }
+
+}
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&

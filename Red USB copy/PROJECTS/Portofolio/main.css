@@ -1,0 +1,51 @@
+*{-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Simonetta', cursive;
+    margin-top:50px;
+}
+
+.transparent{
+    background-color:#3aa15c;
+}
+h1, h4{
+    font-weight: 600;
+}
+
+.max-viewport{
+  min-height: 100vh;
+
+}
+#banner, #contact, #social{
+    background: url(images/ban4.jpeg) no-repeat center center fixed ;
+    background-size:cover ;
+}
+
+#quality {
+    background-color:#3aa15c;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color:white;
+}
+
+.btn-success{
+    background-color:#3aa15c ;
+}
+
+#portofolio{
+    background-color:#e6ecd5;
+}
+
+a i{
+    color:#3aa15c;
+}
+
+btn{
+    bgc:#3aa15c;
+}

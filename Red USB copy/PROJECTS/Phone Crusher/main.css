@@ -1,0 +1,58 @@
+*{-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Simonetta', cursive;
+    margin-top:;
+}
+
+
+.transparent{
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color:white;
+}
+
+.max-viewport{
+  min-height:100vh;
+}
+
+#banner small, h1{
+    font-weight:700;
+}
+
+.viewport-50{
+    min-height:50vh;
+}
+
+#download{
+    background: url(images/phone2.jpg) no-repeat center center fixed ;
+    background-size:cover;
+}
+
+#download p{
+    color:black;
+}
+
+#team img{
+    margin-top:-100px;
+}
+
+#team .card{
+    background-color: whitesmoke;
+}
+
+#team .card:hover{
+    background-color: darkslategrey;
+}
+
+#lower-banner{
+    background: url(images/phone3.png) no-repeat center center fixed ;
+    background-size:cover;
+}

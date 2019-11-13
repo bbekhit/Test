@@ -1,0 +1,40 @@
+-- add eslint extension
+
+-- add .eslintrc file in root folder above .gitignore
+
+-- npm i prettier eslint-config-prettier eslint-plugin-prettier eslint eslint-config-airbnb eslint-p
+lugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev
+
+-- .prettierrc then add
+ {
+  "singleQuote": true,
+}
+
+-- .eslintrc then add
+{
+  "extends": ["react-app", "aribnb"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "plugins": ["prettier"]
+}
+
+-- in VSC add
+"editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "prettier.disableLanguages": [
+    "js"
+  ],
+  "files.autoSave": "onFocusChange",
+
+  *************************************************************************
+  **  add eslint extension
+
+  ** add .eslintrc file in root folder (client) above .gitignore and below src
+
+  ** 
+

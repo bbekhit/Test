@@ -1,0 +1,605 @@
+/* selecting p with class name test */
+p.test {
+  color: green;
+}
+
+/* selecting more than one tag */
+p,
+h1,
+div {
+  color: green;
+}
+
+/* cascading means multiple styles applied to same element and specifity resolve this conflict */
+
+/* best place to add font family is the body as it will pass it to their children as inheritance */
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#someClass h1 {
+  color: red;
+}
+/* combinators is stronger in specifity */
+
+/* selectors: */
+
+/* 1-adjacent selectors */
+h2 + p {
+  color: red;
+}
+/* <div>
+  <h2>Hello</h2>
+  <p>REd</p>
+  <h3>Hello<h3>
+  <p>not red</p>
+  <h2>Hello</h2>
+  <p>Red</p>
+</div> */
+
+/* 2-child  */
+div > p {
+  color: red;
+}
+/* <div>
+  <div>not applied</div>
+  <p>CSS appllied</p>
+  <div>not applied</div>
+  <section>
+    <p>not applied</p>
+  </section>
+  <div><p>css applied</p></div>
+</div> */
+
+/* 3-desendent */
+div p {
+  color: red;
+}
+/* <div>
+  <div>not applied</div>
+  <p>CSS appllied</p>
+  <div>not applied</div>
+  <section>
+    <p>applied</p>
+  </section>
+  <div><p>applied</p></div>
+</div> */
+
+/* multiple class
+<p class="center large"></p> */
+
+/* linking a stylesheet
+1-<link rel="stylesheet" type="text/css" href="mystyle.css">
+2-in the head use <style></style>
+3-inline style="color:red;" */
+
+/* specifity
+1-stylesheet with important
+2-inline
+3-id
+4-class, psuedo-class, attribute
+5-tag, psuedo-element
+/* if i have 2 classes what ever comes last in styleing sheet will be applied */
+
+/* rgb(0, 0, 0) black
+rgb(255,255,255) white */
+
+/* Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff 
+(same as decimal 0-255).
+For example, #ff0000 is displayed as red, 
+because red is set to its highest value (ff) and the others are set to the lowest value (00). */
+
+/* rgba(red, green, blue, alpha)
+The alpha parameter is a number between 0.0 (fully transparent) 
+and 1.0 (not transparent at all): */
+
+h1 {
+  font-family: sans-serif;
+}
+/* this will use the default value in the browser settings; */
+/* as they will use the browser defaults so they are useful */
+/* font link should be above the css link */
+/* order of the styling differs but specifity comes first */
+
+body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}
+/* color - image - repeat - attachment(fixed-scroll-) - position */
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+#banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(images/background-banner.jpg) no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.test {
+  border: 5px solid red;
+  border: 5px dotted red;
+  border: 5px double red;
+  border: 5px dashed red;
+  border-bottom: 0;
+  border-radius: 20px;
+  border-radius: 50%; /* circle */
+}
+
+.half-circle {
+  height: 100px;
+  width: 200px;
+  border: 10px solid red;
+  border-bottom: 0;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+}
+
+div {
+  margin: auto; /*You can set the margin property to auto to horizontally center the element within its container.*/
+}
+
+/* MAX-WIDTH */
+/* Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+This does not happen on left and right margins! Only top and bottom margins! */
+/* width is a fixed value so when the screen is smaller it will adjust by adding scrollbar
+max-width means element can be lower but not to exceed max-widt
+ */
+
+/* BOX-MODEL */
+
+/* Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent */
+body {
+  box-sizing: border-box;
+}
+
+/* outline */
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 10px solid red;
+  outline-offset: 15px;
+}
+
+/* TEXT */
+
+p {
+  color: red;
+  text-align: center; /*justify*/
+  text-transform: capitalize; /* uppercase lowercase */
+  text-decoration: underline;
+  text-shadow: 3px 2px red;
+  letter-spacing: 3px;
+  line-height: 1.5px;
+}
+
+/*FONT*/
+p {
+  font-style: italic;
+  font-size: 25px;
+  font-weight: bold;
+  font-variant: normal;
+}
+
+/* LIST */
+
+ul {
+  list-style-type: circle; /*square*/
+}
+
+ul {
+  list-style-image: url("sqpurple.gif");
+}
+
+ul {
+  list-style-image: url("sqpurple.gif");
+}
+
+ul.a {
+  list-style-position: outside;
+}
+
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+
+/* TABLES */
+
+table,
+th,
+td {
+  border: 1px solid black;
+} /*borders overlap */
+
+table {
+  border-collapse: collapse; /* fix it */
+}
+
+th,
+td {
+  vertical-align: center;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* <div style="overflow-x:auto;"> */
+
+*****************************************************************************
+/* background img using img */
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* <div class="fill">
+    <img src="https://lorempizza.com/320/240" alt="" />
+</div> */
+/* https://stackoverflow.com/questions/14142378/how-can-i-fill-a-div-with-an-image-while-keeping-it-proportional */
+
+/* {this.state.slides.map((item, i) => {
+  if (this.state.slides.indexOf(item) === this.state.slideCount) {
+    return (
+       <div
+        key={i}
+        style={{
+          backgroundImage: `url(${item})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          width: "100vw",
+          height: "100vh"
+        }}
+      />
+    );
+  }
+  return null;
+})} */
+
+// Background styling
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  .btns {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .landingBtn {
+      padding: 16px 25px;
+      margin-right: 10px;
+      background: yellow;
+      font-size: 35px;
+      border-radius: 8px;
+      outline-color: yellow;
+      white-space: nowrap;
+      color: black;
+      outline: none;
+      border: none;
+    }
+  }
+  .fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  .overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/* ******************************************************************************* */
+/* Setting body height  */
+/* https://stackoverflow.com/questions/6654958/make-body-have-100-of-the-browser-height */
+
+******************************************************************
+/* i use the font-family in the body as the body is the whole wrapper for all elements  */
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+/* but any direct selector will overwrite inheritance from body */
+/* *********************************************************************** */
+/* https: ; //stackoverflow.com/questions/17391364/what-is-the-difference-between-the-selectors-class-class-and-class-class .class.class */
+/* .class .class; */
+/* if i have 2 clases on an element and one comes later in css file it will win */
+/* ************************************************************************** */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+/* i don't do it in the body because if i have a block level such as section it will gain so i need to reset each element separatly */
+
+/* inline and block */
+/* inline stack next to eachother and doesn't take the whole block */
+/* https://www.w3schools.com/css/css_inline-block.asp */
+
+p {
+  display: none;
+}
+/* it disappears and the other elements takes it's place */
+
+p {
+  display: inline-block;
+}
+/* https://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block */
+
+/* Traning */
+ul {
+  list-style-type: none;
+  text-align: center;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.548);
+}
+
+li {
+  display: inline;
+  border: 1px solid red;
+}
+
+li:not(:last-child):after {
+  content: " |";
+}
+
+/* can i use website */
+/* https://caniuse.com/#search=background-attachment */
+
+/* box-shadow */
+#example1 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  box-shadow: 5px 10px 8px 10px #888888;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  /* horizontal vertical blur sprad-radius */
+}
+/* The shadow color will be inherited from the text color. */
+
+.button {
+  font: inherit;
+  /* to overwrite the button styling */
+}
+
+/* outline  */
+/* is not included in the box model */
+.button:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* !important overwrites specifity which let the code not easy to be understood */
+
+/* Positioning******************************************************* */
+
+/* static is the default and top left bottom z-index doen't work with it*/
+
+/* position fixed is related to viewport and change elements to inline-block element which can take a width and height and it takes element from document flow */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* position absolute is similar to fixed it takes the element from document flow and looks for the closest element set to (relative,absolute) to be related to so the context depends if no ancestor it will follow the html but //fixed follow viewport// */
+
+/* VIP for relative position the element isn't taken from document flow and i use top and bottom to move the element itself from current position */
+
+/* VIP when i add fixed or absolute the element changes right away while in relative it doesn't */
+
+/* <div class="outer">
+      <div class="wrapper">
+        <div class="showRelative">relative</div>
+      </div>
+    </div> */
+.outer {
+  height: 800px;
+  width: 800px;
+  margin: 80px auto;
+  border: 1px solid purple;
+}
+
+.wrapper {
+  border: 1px solid green;
+  height: 700px;
+  width: 700px;
+  margin: 75px auto;
+  /* position: relative; */
+}
+
+.showRelative {
+  width: 50%;
+  height: 50%;
+  border: 1px solid red;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+
+/* sticky is mixed between relative and fixed */
+
+/* z-index set to default auto or 0 */
+
+/* vip z-index need to have a position on element to work except static */
+
+img {
+  background-origin: border-box;
+}
+
+.land {
+  background: url("../assets/images/mobil-phone-5.jpg") left 10% top 3% / cover
+    no-repeat border-box fixed;
+  background-repeat: no-repeat;
+  background-position: left 10% top 3%;
+  background-size: cover;
+  background-origin: border-box;
+  background-clip: border-box;
+  background-attachment: fixed;
+}
+
+/* <img src=""> will win in the priority of width and height */
+
+img {
+  height: 100%;
+}
+/* VIP will go back to the original size of image if the container is inline element so we have to set px values for the image styling */
+
+/* ********************************************************* */
+/* VIP % width */
+/* if element is fixed so it will take the % of the view port */
+
+/* VIP % width */
+/* if element is absolute so it will take the % of the ancestor + padding and ancestor should have a position set up to(relative,absolute,sticky) if it's not so it behaves like fixed as an example the backdrop ###vip*/
+
+/* VIP % width */
+/* if element is relative or static so it will take the % of the ancestor only 
+and if the ancestor is inline and not block it will look for next ancestor###vip*/
+
+/* we get a problem with the height so we fix it by */
+
+.backdrop {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* in this case the backdrop will take the % from the body but it's not showing the height because height in not defined so to fix it we add html:100% and body:height:100% and it will be in the document flow so it's above the other elements and not covering entire page lesson 118*/
+
+/* second way to fix it is  */
+.backdrop {
+  position: absolute;
+}
+/* this solution work even after removing the html and body:height:100% because i haven't set the ancestor (body) to a position(relative,absolute) so the back drop act like fixed and it sticks to the viewport */
+
+/* another example */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.parent {
+  width: 50%;
+  height: 50%;
+  border: 2px solid red;
+  margin: 100px auto;
+}
+/* <body>
+<div class="parent">
+       <div class="child">
+            Hello from Child
+       </div>
+    
+  </body> */
+/* here the parent is static by default so it didn't pick up the height of the body so i had to define the body height */
+/* ****************************************************************************** */
+
+/* font-size not set previously(20px) will change with the browsers settings lesson 119*/
+
+/* rem allows us to set the font-size so it can be changed when user changes default setting like medium and large lesson 65 Andrew Mead */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+/* so now 1rem === 10px  => 16*.625 = 10 */
+
+/* adding a tooltip */
+/* <Link to={`shop/${id}`} title="tooltip"></Link> */
+
+/* mydevice.io physical width of phones */
+
+/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */
+/* with this tag i set the width of the page to the width of the device */
+
+/* if idon't have it the browser will not know about the screen size and it will just squeeze the webpage to the pixels it has */
+
+/* have to put @media in order of screen heights */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* className = {classnames({[css.label]:true, [css.selected]:filters.createdBy})} */
+
+/* flex-row; elements will take full height of the longest element height and width of its content lesson:195 */
+
+/* when i use wrap the element takes height of its content and not the heihtest element height lesson 196 */
+
+/* flex-column shows element default value so a div will take entire space */
+
+div {
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+div {
+  flex-grow: 1; /* element will grow inside the remaining space */
+}
+div2 {
+  flex-grow: 4; /* element will grow inside the remaining space 4X div1 */
+}
+/* the remining space is divided by 5 and div2 takes 4 of it */
+
+div {
+  flex: 0 1 auto;
+}

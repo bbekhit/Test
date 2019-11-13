@@ -1,0 +1,83 @@
+// <Link className={classes.navBtn} to="/cart">
+//           <i className={`${classes.icon_cart} fa fa-shopping-cart`} />
+//           {isAuthenticated ? (
+//             user.cart.length >= 1 ? (
+//               <span>{user.cart.length}</span>
+//             ) : null
+//           ) : null}
+//         </Link>
+
+header span {
+  padding: 4px;
+  background: black;
+  position: absolute;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 15px;
+  top: -80%;
+  left: 85%;
+  transition: all 2s ease;
+  color: red;
+}
+
+.icon_cart {
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+}
+// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+// <div class="col-sm-6 col-lg-4 value text-center my-3">
+// <span class="value-icon"><i class="fas fa-utensils fa-fw"></i></span>
+// <span class="value-number">1</span>
+// <h1 class="my-2 text-uppercase">eat</h1>
+// </div>
+
+.value {
+  position: relative
+}
+
+.value-icon {
+  font-size: 60px;
+  color: #f1fffa;
+  background: #242424;
+  padding: 25px 35px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: all 2s ease;
+
+}
+
+.value-number {
+  padding: 15px;
+  background: #2a9134;
+  position: absolute;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+  top: -12%;
+  left: 57%;
+  transition: all 2s ease;
+  color: #242424;
+}
+// ***********************************************************************************************
+// <li class="nav-item mr-4">
+//             <a class="nav-link" href="#">
+// 						<i class="fa fa-bell icon"></i>
+// 					</a>
+//           </li>
+.navbar .icon {
+	position: relative;
+}
+
+.navbar .icon::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: 10px;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: #ef5350;
+}

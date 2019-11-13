@@ -1,0 +1,41 @@
+.nav-btn {
+  position: absolute;
+  z-index: 99;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .nav-line {
+    width: 2.8rem;
+    height: 0.3rem;
+    margin: 0 0 0.5rem 0;
+    background: black;
+    @include easeOut;
+  }
+
+  &.close {
+    transform: rotate(180deg);
+
+    .nav-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+// <div
+// className={`nav-btn ${this.state.btnClose ? "close" : null}`}
+// onClick={this.onClick}
+// >
+// <div className="nav-line" />
+// <div className="nav-line" />
+// <div className="nav-line" />
+// </div>

@@ -1,0 +1,11 @@
+transition is used in the element itself that we say it will transit when there is a trigger like click or mainly hover
+
+.btn{
+  color:red;
+  transition:all 1s ease-out
+  &:hover{
+    color:orange;
+    transform:rotate(180deg) scale(1.2) translate()
+  }
+}
+

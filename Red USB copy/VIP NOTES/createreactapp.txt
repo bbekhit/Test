@@ -1,0 +1,3 @@
+- npx to create react app without installing it globally
+- if i am inside a folder and i want to create a react app without name as client
+npx i use < npx create-react-app . > instead of <create-react-app client>
