@@ -41,21 +41,43 @@
 // command + tab to switch between windows
 // ctr S ctr K all shortcuts in Vs
 
-final _ - - - - - - - - -- - - - - - - - -
+final \_ - - - - - - - - -- - - - - - - - -
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontSize": 18,
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "terminal.integrated.fontSize": 18,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    },
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    // "editor.formatOnSave": true,
-    "window.zoomLevel": 0,
-    "css.remoteStyleSheets": [
-        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    ]
+"workbench.iconTheme": "material-icon-theme",
+"editor.fontSize": 18,
+"editor.tabSize": 2,
+"editor.wordWrap": "on",
+"terminal.integrated.fontSize": 18,
+"emmet.includeLanguages": {
+"javascript": "javascriptreact"
+},
+"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+// "editor.formatOnSave": true,
+"window.zoomLevel": 0,
+"css.remoteStyleSheets": [
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+]
 }
- - - - - - - - - - - - - ## _ - - - - - - - - - - - - - - - - - - - - - - - -
+
+- - - - - - - - - - - - ## \_ - - - - - - - - - - - - - - - - - - - - - - - -
+                        final-2
+                        {
+                        "workbench.iconTheme": "material-icon-theme",
+                        "editor.fontSize": 18,
+                        "editor.tabSize": 2,
+                        "editor.wordWrap": "on",
+                        "terminal.integrated.fontSize": 18,
+                        "emmet.includeLanguages": {
+                        "javascript": "javascriptreact"
+                        },
+                        "emmet.syntaxProfiles": {
+                        "javascript": "jsx"
+                        },
+                        "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+                        "editor.formatOnSave": true,
+                        "window.zoomLevel": -1,
+                        "css.remoteStyleSheets": [
+                        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                        ],
+                        "javascript.updateImportsOnFileMove.enabled": "always",
+                        }
