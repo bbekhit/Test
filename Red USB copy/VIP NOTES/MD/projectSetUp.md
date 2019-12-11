@@ -37,3 +37,19 @@ res.send("Users Route");
 });
 
 -- jwt.io to inspect tokens
+
+-- npm i -S morgan
+
+-- app.use(express.json({ extended: false })); bodyParser
+
+-- routes/post.js
+exports.getPosts = (req, res) => {
+res.send("Posts");
+};
+server.js
+const express = require("express");
+const app = express();
+const { getPosts } = require("./routes/post");
+app.get("/", getPosts);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`app running on port ${PORT}`));

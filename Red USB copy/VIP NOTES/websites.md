@@ -194,6 +194,8 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://www.ringba.com/
 - ### navbar animation cool with flipping vip
   https://codepen.io/ricardoolivaalonso/pen/GRRNoqL
+- ### online tutorials huge selection
+  https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
 
 ## REACT
 
@@ -207,6 +209,9 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://reactresources.com/people/brad-traversy
 - ### Drag and Drop vip vip
   https://engineering.datorama.com/mastering-drag-drop-using-reactjs-hooks-fb58dc1f816f
+  https://codeburst.io/lets-build-dnd-column-reordering-in-an-html-table-w-react-hooks-eef7d9da5a07
+  https://www.youtube.com/watch?v=j8IlGnKOb6E
+  https://www.youtube.com/watch?v=-MfTv5VRM0A
 - ### animation fade-in scroll
   https://ihatetomatoes.net/one-page-scroll-with-animations/
   https://www.sitepoint.com/scroll-based-animations-jquery-css3/
