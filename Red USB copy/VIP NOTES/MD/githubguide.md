@@ -17,7 +17,7 @@
 3-examples of geolocation
 4-2 ways of editing in reducer and CrudEdit
 
--- REACT-HOOKS-LINKME-APP on github/ shopy on mac
+-- E-COMMERCE-REACT-APP on github/ shopy on mac
 1-modal
 2-remove class on unmount(LoginModal)
 3-getDerivedStateFromProps(LoginModal)
@@ -28,6 +28,20 @@
 8-Rating
 9-multiStep registeration
 10-
+
+-- SEND_GRID_EMAILS_REACT
+1-Google login
+2-pre-sign up(activation)
+3-fetch in authActions
+4-send emails
+5-loading button in contact form
+6-reset password
+7-client validation
+8-express validation
+9-multiple private routes
+10-multiple destruction in ResetPassword
+11-final authentication
+12-async onSubmit Signup.js
 
 -- test on github/ test on mac
 1-ReactComponents slider + dots
@@ -40,16 +54,32 @@
 8-Vijay Sinha - flag picker - 1/16/2019
 9-Hotel React Project in starred 12/9/2019
 
+-- FILTERING_REACT_EXAMPLE
+1-tshirt store
+
+-- PAGINATION
+1-pagination
+2-axios instance
+3-drag and drop
+
 -- Plan
 Axios (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Password generator (brad YouTube)
+Password generator (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Pagination (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-how to get random elements(email starred)
+how to get random elements(email starred) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Drag (favorites email) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-eslint (brad-manorism-from email)
-Shirt store(websites.md)
-Tech store(smigla youtube)
+fileUpload (brad) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+eslint (brad-manorism-from email) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Shirt store(websites.md) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+AOS (email) & library xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+next (colt) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+next (Ryan)
+context(colt)
+Tech store context(smigla youtube)
+CSS (Jonas)
 Testing
-Reset password
-Activate user
-Admin
+github (udemy)
+smooth scroll
+node(jonas)
+node(sumarai)
+native

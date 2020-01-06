@@ -81,3 +81,34 @@ final \_ - - - - - - - - -- - - - - - - - -
                         ],
                         "javascript.updateImportsOnFileMove.enabled": "always",
                         }
+
+- - - - - - - - - - - - ## \_ - - - - - - - - - - - - - - - - - - - - - - - - final final
+                                                {
+                            "workbench.iconTheme": "material-icon-theme",
+                            "editor.fontSize": 18,
+                            "editor.tabSize": 2,
+                            "editor.wordWrap": "on",
+                            "terminal.integrated.fontSize": 18,
+                            "emmet.includeLanguages": {
+                                "javascript": "javascriptreact"
+                            },
+                            "eslint.alwaysShowStatus": true,
+                            "prettier.disableLanguages": [
+                                "js"
+                            ],
+                            // "files.autoSave": "onFocusChange",
+                            "emmet.syntaxProfiles": {
+                                "javascript": "jsx"
+                            },
+                            "editor.formatOnSave": true,
+                            "eslint.autoFixOnSave": true,
+                            "[javascript]": {
+                                "editor.formatOnSave": false
+                            },
+                            "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+                            "window.zoomLevel": -1,
+                            "css.remoteStyleSheets": [
+                                "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                            ],
+                            "javascript.updateImportsOnFileMove.enabled": "always",
+                        }

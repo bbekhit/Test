@@ -128,7 +128,7 @@ const showHello = () => {
 export class FunctionReact extends Component {
   showWorld() {
     console.log("World");
-    return <h1>World</h1>
+    return <h1>World</h1>;
   }
   render() {
     return (
@@ -165,9 +165,9 @@ export class FunctionReact extends Component {
   state = {
     title: ""
   };
-  handleClick=() =>{
-    this.setState({title:"Hello World"})
-  }
+  handleClick = () => {
+    this.setState({ title: "Hello World" });
+  };
   render() {
     return (
       <div>
@@ -187,7 +187,7 @@ export class FunctionReact extends Component {
   };
   handleClick() {
     this.setState({ title: "Hello World" });
-  };
+  }
   render() {
     return (
       <div>
@@ -201,16 +201,16 @@ export default FunctionReact;
 // Example #6
 import React, { Component } from "react";
 export class FunctionReact extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state={
+    this.state = {
       title: ""
-    }
-    this.handleClick=this.handleClick.bind(this)
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
-    handleClick() {
+  handleClick() {
     this.setState({ title: "Hello World" });
-  };
+  }
   render() {
     return (
       <div>
@@ -282,7 +282,7 @@ class Child extends React.Component {
   render() {
     return (
       <div>
-        <FunctionReact name={"Boutros"} getFamily={this.getFamily} /> 
+        <FunctionReact name={"Boutros"} getFamily={this.getFamily} />
         {/* this is a parent and i want to get family info from its child */}
         <p>{this.state.family.one}</p>
         <p>{this.state.family.Two}</p>
@@ -353,3 +353,96 @@ export default class FunctionReact extends Component {
   }
 }
 // ********************************************************************************
+const GoalInput = props => {
+  const [enteredGoal, setEnteredGoal] = useState("");
+
+  const onChangeText = enteredGoal => {
+    setEnteredGoal(enteredGoal);
+  };
+
+  const addGoalHandler = () => {
+    props.onAddGoal(enteredGoal);
+    setEnteredGoal("");
+  };
+  return (
+    <Modal visible={props.isAddMode} animationType="slide">
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Course Goal"
+          value={enteredGoal}
+          onChangeText={onChangeText}
+          style={styles.input}
+        />
+        <Button title="Add" onPress={addGoalHandler} />
+      </View>
+    </Modal>
+  );
+};
+export default GoalInput;
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+export default function App() {
+  const [courseGoals, setCourseGoals] = useState([]);
+  const [isAddMode, setIsAddMode] = useState(false);
+  const addGoal = goal => {
+    const currentGoals = courseGoals;
+    setCourseGoals([
+      ...currentGoals,
+      { id: Math.random().toString(), value: goal }
+    ]);
+    setIsAddMode(false);
+  };
+
+  const onRemoveHandle = goalId => {
+    const currentGoals = courseGoals;
+    setCourseGoals(currentGoals.filter(item => item.id !== goalId));
+  };
+  return (
+    <View style={styles.screen}>
+      <Button title="Add New Goal" onPress={() => setIsAddMode(true)} />
+      <GoalInput onAddGoal={addGoal} isAddMode={isAddMode} />
+      <FlatList
+        keyExtractor={item => item.id}
+        data={courseGoals}
+        renderItem={itemData => (
+          <GoalItem
+            title={itemData.item.value}
+            onDelete={onRemoveHandle}
+            id={itemData.item.id}
+          />
+        )}
+      />
+    </View>
+  );
+}
+// in GoalInput i used the onChangeText(native) and it points to onChangeText(changeHandler) which in turn sets the state // regular flow
+// in GoalInput(child component) i want to send data(enteredGoal) to parent component(<GoalInput), so i used <Button title="Add" onPress={addGoalHandler} /> or <Button title="Add" onPress={() => props.onAddGoal(enteredGoal)} /> then in parent comopnent i used <GoalInput onAddGoal={addGoal} isAddMode={isAddMode} /> to receive the data and do whatever with it like add it to the array
+// const addGoal = goal => {
+//   const currentGoals = courseGoals;
+//   setCourseGoals([
+//     ...currentGoals,
+//     { id: Math.random().toString(), value: goal }
+//   ]);
+//   setIsAddMode(false);
+// };
+
+// child
+const GoalItem = props => {
+  return (
+    <TouchableOpacity
+      onPress={props.onDelete} //{() => props.onDelete(props.id)}
+      activeOpacity={0.8}
+      underlayColor="red"
+    >
+      <View style={styles.listItem}>
+        <Text>{props.title}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+};
+
+// parent
+<GoalItem
+  title={itemData.item.value}
+  onDelete={() => onRemoveHandle(itemData.item.id)} //{onRemoveHandle}
+  id={itemData.item.id}
+/>;

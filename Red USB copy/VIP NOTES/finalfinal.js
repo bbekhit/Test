@@ -178,6 +178,12 @@ function flatten(arr) {
   }
   return result;
 }
+
+const myArray = [['1', '2', '3'], ['4', '5']];
+const flatArray = myArray.reduce((total, amount) => total.concat(amount));
+
+var nestedArray = [1, 2, [3, 4, [5, 6]]];
+nestedArray.flat(2);
 console.log(flatten([1, [2], [[[[3]]]]]));
 
 // 11**********************************
@@ -1774,3 +1780,16 @@ const throttle = (func, limit) => {
     }
   }
 }
+
+function getRandomElements(arr, n) {
+  let newItems = [];
+
+  for (let i = 0; i < n; i++) {
+    let idx = Math.floor(Math.random() * arr.length);
+    newItems.push(arr[idx]);
+    arr.splice(idx, 1);
+  }
+  return newItems;
+}
+
+getRandomElements(testArray, 3);

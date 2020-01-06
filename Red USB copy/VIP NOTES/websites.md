@@ -142,6 +142,9 @@ https://startupsventurecapital.com/javascript-save-time-by-avoiding-re-writing-t
 ## Eslint with prettier
 
 https://www.youtube.com/watch?v=bfyI9yl3qfE
+https://www.youtube.com/watch?v=SydnKbGc7W8
+https://www.youtube.com/watch?v=GedOLszVOo4
+https://www.youtube.com/watch?v=bfyI9yl3qfE
 
 ## TESTING
 
@@ -196,6 +199,14 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://codepen.io/ricardoolivaalonso/pen/GRRNoqL
 - ### online tutorials huge selection
   https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
+- ### practice
+  https://www.youtube.com/watch?v=5PVHJ_dG8T8&feature=youtu.be
+- ## nice buttons animation
+  https://codepen.io/zekasflower/pen/yLyoxRO
+- ## wavy
+  https://www.youtube.com/watch?v=l5PkvXb3LeU&list=PL5e68lK9hEzcCaJpLt5ojGS6vavwJDNWH&index=9&t=0s&app=desktop
+- ## graphics
+  https://undraw.co/search
 
 ## REACT
 
@@ -234,28 +245,34 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
 - ### multistep form
   https://scotch.io/tutorials/creating-multistep-forms-with-react-and-semantic-ui
 - ### React Training Shopping Cart
-- shopping cart
+- ## shopping cart
   https://dzone.com/articles/create-a-simple-shopping-cart-using-react-and-node
-- onscroll
+- ## onscroll
   https://stackoverflow.com/questions/44612364/toggle-class-based-on-scroll-react-js
-- reactstrap
+- ## reactstrap
   https://www.google.com/search?q=reactstrap+layout+tutorial&ie=UTF-8&oe=UTF-8&hl=en-us&client=safari
-- custom function
+- ## custom function
   https://stackoverflow.com/questions/40870777/where-to-put-utility-functions-in-a-react-redux-application
-- image slider
+- ## image slider
   https://codepen.io/DZuz14/pen/XxKLVY
   https://codepen.io/DZuz14/pen/XxKLVY
   https://www.youtube.com/watch?v=3ax9TW2c2bY
   https://scotch.io/tutorials/build-an-image-slider-using-react-superagent-and-the-instagram-api
-- shirt store
+- ## shirt store
   https://shirtmate.netlify.com/
   https://github.com/augustnejudne/shirt-store
-- store source code vip vip
+- ## store source code vip vip
   https://github.com/nemanjam/eshop-page
-- star rating
+- ## star rating
   https://codesandbox.io/s/62x458v5pn
-- pagination vip vip
+- ## pagination vip vip
   https://medium.com/@SilentHackz/pagination-in-reactjs-a8c8acc027c7
+  https://onaircode.com/react-js-pagination-component-libraries-and-examples/
+- ## count down
+  https://alligator.io/react/countdown-timer-react-hooks/
+- ## drag and drop
+  https://github.com/siffogh/drag-and-drop-article/blob/master/src/App.js
+  https://www.freecodecamp.org/news/how-to-make-and-test-your-own-react-drag-and-drop-list-with-0-dependencies-6fb461603780/
 
 ## VS CODE EXTENSIONS
 
@@ -271,3 +288,16 @@ http://overapi.com/
 https://m.youtube.com/playlist?list=PLPQBI7MzS0lWOwzwZ4KQRulhD2Pnfl15P
 https://m.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH
 https://appendto.com/2017/04/45-useful-javascript-tips-tricks-and-best-practices/
+
+## REACT-NATIVE
+
+https://youtu.be/zJ9QETiwdfo
+https://youtu.be/xutPT1oZL2M
+https://youtu.be/CkiR6_KbVwA
+https://youtu.be/xqvB3yLy9Uc
+https://snipplabs.com/post.html?compo=card-for-real-estate-rs-003 -- VIP
+https://kriss.io/amazon-ui-clone-with-react-native-3-drawer-menu/
+
+## free APIs
+
+https://rapidapi.com/collection/list-of-free-apis
