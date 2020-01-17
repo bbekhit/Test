@@ -62,6 +62,10 @@
 2-axios instance
 3-drag and drop
 
+-- budget Calculator
+1-google fonts url in css
+2-react-icons
+
 -- Plan
 Axios (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Password generator (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -205,6 +205,9 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://codepen.io/zekasflower/pen/yLyoxRO
 - ## wavy
   https://www.youtube.com/watch?v=l5PkvXb3LeU&list=PL5e68lK9hEzcCaJpLt5ojGS6vavwJDNWH&index=9&t=0s&app=desktop
+- ## wavy design VIP VIP
+  https://getwaves.io/
+  https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
 - ## graphics
   https://undraw.co/search
 

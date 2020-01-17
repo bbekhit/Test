@@ -1,0 +1,46 @@
+/* 1- multiple transform */
+/* as it will overwrite it if in separate lines */
+div {
+  transform: scale(2) rotate(45deg);
+}
+
+/* 2-timing function for transition  */
+/* https://easings.net/en# */
+/* https://matthewlein.com/tools/ceaser */
+
+/* 3- a) fullscreen image is in the background of a container div and we play with the others component to place where we want // Components/FullCover
+b) can add a wrapper container as in .landing-wrapper in FullImage and let image take 100% to make it responsive and then absolute to make it float then z-index -1 to show other content of wrapper container.
+also we can let all other staff is absolute and position it accordingly and not use absolute for image and z-index //w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text */
+
+/* 4- rounded image/order/  in Layout */
+/*    card/swipe/ in Overlay */
+
+/* 5- icon next to input in navbar in Sticky */
+
+/* 6-When an element is hidden with display:none (like in the example above), the element will not take up any space.
+To find out if an element is hidden with visibility:hidden, see the example below. This "hidden" element will take up space. */
+
+menu
+-custom select
+-custom checkbox
+-tooltip
+-animated button
+-animated search
+-responsive form
+-caps lock
+-toggle button
+-fullscreen video
+-timeline
+-rippon
+-loading dots
+-list group
+-responsive text
+-custom scroll
+-placeholder
+-selection text
+-typewriter
+
+
+
+
+

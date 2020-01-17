@@ -1793,3 +1793,14 @@ function getRandomElements(arr, n) {
 }
 
 getRandomElements(testArray, 3);
+
+const original = {
+  fullName:{
+    firstName:"john",
+    lastName:"Doe"
+  }
+}
+const cloneOriginal = {...original}
+cloneOriginal.fullName.firstName = "Will"
+console.log(original)
+

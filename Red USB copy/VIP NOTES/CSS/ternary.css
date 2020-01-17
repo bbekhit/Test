@@ -1,0 +1,26 @@
+/* style={{ background: `url(${img1})` }} */
+/* style={{
+  background:`url(${this.renderCardImage(props.images)}) no-repeat`
+}} */
+/* ul className={`menu-nav ${this.state.btnClose ? "show" : null}`}
+props.match.params.id
+match:{params:{id}} */
+
+/* function AccountActivate({
+signup,
+match: {
+params: { token },
+},
+}) */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+:root {
+  --primaryColor: #f15025;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #9e9e9e;
+  --mainRed: #d50000;
+  --mainGreen: #4caf50;
+}
+
+/* https://uigradients.com/#ViceCity */
