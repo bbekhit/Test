@@ -199,6 +199,8 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://codepen.io/ricardoolivaalonso/pen/GRRNoqL
 - ### online tutorials huge selection
   https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
+  https://www.youtube.com/watch?v=wVvhqJBcmcg&feature=youtu.be&list=PLEXedA_rYzg9E2cU_k6GCmLL4pjtpUBCc
+  https://www.youtube.com/watch?v=-2LtZRi6Q0s&feature=youtu.be
 - ### practice
   https://www.youtube.com/watch?v=5PVHJ_dG8T8&feature=youtu.be
 - ## nice buttons animation
@@ -210,9 +212,17 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
 - ## graphics
   https://undraw.co/search
+- ## automatic slider
+  https://codepen.io/suez/pen/OjGQza
+- ## custom checkbox
+  https://codepen.io/fernandofleury/pen/ErAdC
+  https://codepen.io/boo0330/pen/qZwGmr
+  https://codepen.io/onediv/pen/pjgNqJ
 
 ## REACT
 
+- ## Datepicker VIP VIP
+  https://blog.logrocket.com/react-datepicker-217b4aa840da/
 - ### free templates material-ui
   https://material-ui.com/getting-started/templates/
 - ### material ui tutorials
@@ -274,8 +284,16 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
 - ## count down
   https://alligator.io/react/countdown-timer-react-hooks/
 - ## drag and drop
+
   https://github.com/siffogh/drag-and-drop-article/blob/master/src/App.js
   https://www.freecodecamp.org/news/how-to-make-and-test-your-own-react-drag-and-drop-list-with-0-dependencies-6fb461603780/
+
+- ## updating state VIP VIP
+
+  https://linguinecode.com/post/why-react-setstate-usestate-does-not-update-immediately
+
+- ## automatic slider
+  https://codepen.io/suez/pen/OjGQza
 
 ## VS CODE EXTENSIONS
 

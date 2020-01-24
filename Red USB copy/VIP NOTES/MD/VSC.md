@@ -32,6 +32,11 @@
 // 9-gitLens from Eric
 // 11- material-icon-theme
 // 10-auto-open markdown preview from hnw
+// 12-rainbow-indent
+// 13-VSC-styled-components
+// 14-DotENV
+// 15-highlight matching tag
+//
 
 // npm install npm@latest -g
 // npm install -g create-react-app
