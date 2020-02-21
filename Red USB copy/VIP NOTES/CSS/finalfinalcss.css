@@ -20,13 +20,15 @@ also we can let all other staff is absolute and position it accordingly and not 
 /* 6-When an element is hidden with display:none (like in the example above), the element will not take up any space.
 To find out if an element is hidden with visibility:hidden, see the example below. This "hidden" element will take up space. */
 
+/* clip path, let following section has a padding of 25rem then margin-top:-20vh which is the the clip path skew */
+
+/* https://css-tricks.com/snippets/html/glyphs/  */ 
 menu
--caps lock
+
 -timeline
 -rippon
 -selection text
--typewriter
--before after
+-clippath
 
 
 

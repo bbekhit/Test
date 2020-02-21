@@ -155,6 +155,8 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
 
 ## CSS
 
+- ### videos
+  www.coverr.co
 - ### shapes
   https://css-tricks.com/the-shapes-of-css/
 - ### position sticky
@@ -175,6 +177,12 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://bennettfeely.com/clippy/
 - ### border-radius generator vip vip
   https://9elements.github.io/fancy-border-radius/#100.0.0.49--500.300
+- ## wavy design VIP VIP
+  https://getwaves.io/
+  https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
+- ### timing function for transition vip
+  https://easings.net/en#
+  https://matthewlein.com/tools/ceaser
 - ### animation star arabic vip vip
   https://codepen.io/Asmaa-codepen/pen/NWKvBqO
 - ### progressbar
@@ -207,9 +215,6 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://codepen.io/zekasflower/pen/yLyoxRO
 - ## wavy
   https://www.youtube.com/watch?v=l5PkvXb3LeU&list=PL5e68lK9hEzcCaJpLt5ojGS6vavwJDNWH&index=9&t=0s&app=desktop
-- ## wavy design VIP VIP
-  https://getwaves.io/
-  https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
 - ## graphics
   https://undraw.co/search
 - ## automatic slider

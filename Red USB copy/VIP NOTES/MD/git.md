@@ -366,3 +366,6 @@ i have a branch that isn't updated and have some changes not committed and i wan
 ### fetching one branch 
 - git fetch <origin/or master> <branch name>
 - to reset all commits git reset --soft HEAD~1
+
+### test update
+npm test -- -u

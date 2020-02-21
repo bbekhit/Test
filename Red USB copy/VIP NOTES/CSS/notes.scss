@@ -74,11 +74,12 @@ div p {
 3-inline style="color:red;" */
 
 /* specifity
-1-stylesheet with important
-2-inline
+1-stylesheet with important 
+2-inline (inline,id,classes,elements)
 3-id
 4-class, psuedo-class, attribute
-5-tag, psuedo-element
+5-tag(element), psuedo-element
+/* * has specifity of (0,0,0,0) */
 /* if i have 2 classes what ever comes last in styleing sheet will be applied */
 
 /* rgb(0, 0, 0) black
@@ -351,6 +352,7 @@ body {
 * {
   box-sizing: border-box;
 }
+/* * has specifity of (0,0,0,0) */
 body {
   font-family: "Courier New", Courier, monospace;
   margin: 0;
@@ -603,3 +605,74 @@ div2 {
 div {
   flex: 0 1 auto;
 }
+
+/* VIP  */
+/* padding %  */
+div {
+  padding: 10%;
+}
+/* 
+% fonts  ===== % of parent font
+% length ====  % of parent WIDTH ...vip
+
+em fonts ====  % of parent font-size
+em length === % of element font-size
+rem both ==== % of root font-size */
+
+/* Inheritance 
+properties related to texts are inherited 
+font-family, font-size, color */
+
+/* sass  */
+button:hover {
+  background-color: darken(red, 15%);
+  background-color: lighten(red, 15%);
+}
+
+@mixin text-styling($color) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+}
+@function divide($a, $b) {
+  @return $a/$b;
+}
+%btn-placeholder {
+  width: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
+}
+button {
+  @include text-style(red);
+  margin: divide(60/2) * 1px;
+  @extend %btn-placeholder; //then add my styles
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
+
+div {
+  width: calc((100% - #{$gutter-vertical}) / 2);
+}
+
+// note
+div {
+  box-shadow: 0 5px 3px rgba($color, 0.3);
+}
+
+div {
+  max-width: $grid-width;
+  background-color: #fff;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical; // applies all vertical except last child
+  }
+}
+
+// /* https://css-tricks.com/snippets/html/glyphs/  */ html entities vip vip vip
+
+// The perspective property defines how far the object is away from the user. So, a lower value will result in a more intensive 3D effect than a higher value.
+// When defining the perspective property for an element, it is the CHILD elements that get the perspective view, NOT the element itself.
