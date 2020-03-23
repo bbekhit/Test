@@ -220,9 +220,17 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
 - ## automatic slider
   https://codepen.io/suez/pen/OjGQza
 - ## custom checkbox
+
   https://codepen.io/fernandofleury/pen/ErAdC
   https://codepen.io/boo0330/pen/qZwGmr
   https://codepen.io/onediv/pen/pjgNqJ
+
+- ## Ui gradients
+
+  https://uigradients.com/#ViceCity
+
+- ## CSS HTML entities
+  https://css-tricks.com/snippets/html/glyphs/
 
 ## REACT
 

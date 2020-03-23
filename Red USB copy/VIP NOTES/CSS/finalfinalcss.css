@@ -22,15 +22,53 @@ To find out if an element is hidden with visibility:hidden, see the example belo
 
 /* clip path, let following section has a padding of 25rem then margin-top:-20vh which is the the clip path skew */
 
-/* https://css-tricks.com/snippets/html/glyphs/  */ 
-menu
+/* https://css-tricks.com/snippets/html/glyphs/  */
 
--timeline
--rippon
--selection text
--clippath
+/* position fixed is related to viewport and change elements to inline-block element which can take a width and height and it takes element from document flow */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* position absolute is similar to fixed it takes the element from document flow change elements to inline-block and looks for the closest element set to (relative,absolute,fixed) to be related to so the context depends if no ancestor it will follow the html but //fixed follow viewport// */
 
+/* VIP for relative position the element isn't taken from document flow and i use top and bottom to move the element itself from current position */
 
+/* VIP when i add fixed or absolute the element changes right away while in relative it doesn't */
 
+/* add overflow hidden to element to guarantee element not get outside even when using absolute as in navbar , sometimes it doesn't work untill we add overflow:hidden to html section:6 --90 */
 
+/* sticky is hybrid between relative and fixed, we have to specify distance // from view port, and it ends when content of parent element ends */
+div {
+  position: sticky;
+  top: 20px;
+}
 
+/* stacking context when i have 3 parents with fixed position, the child of each element will be contained inside the element even if i use a higher z-index section-6 --92 */
+
+/* display:none : occupies no space, no elements here.
+opacity:0 : occupies space, you can click on element behind it.
+visibility:hidden : occupies space and you can not click element behind it. */
+
+/* Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. */
+
+/* specifity
+1-stylesheet with important 
+2-inline (inline,id,classes,elements)
+3-id
+4-class, psuedo-class, attribute
+5-tag(element), psuedo-element
+* has specifity of (0,0,0,0)
+if i have 2 classes what ever comes last in styleing sheet will be applied
+section 3 --13 jonath
+will look into importance =====> specifity ====> order
+(inline, id, classes, element)
+(0,0,1,0)
+(0,1,2,2) ==== will win as we go one by one
+(0,0,0,1)
+(0,1,2,1) */

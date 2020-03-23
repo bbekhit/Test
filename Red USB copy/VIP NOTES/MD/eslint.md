@@ -129,3 +129,48 @@ target will let eslint to run prettier for js filles then prettier format rest o
 ]
 }
 }
+
+// Brad
+1-format on save
+2-check single quote for pretier
+3-download Prettier and eslint extensions in VSC
+4-
+
+### monorasim https://www.youtube.com/watch?v=bfyI9yl3qfE
+
+1-download Prettier and eslint extensions in VSC
+2-.eslintrc in client below src
+3-npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+
+### other guy https://www.youtube.com/watch?v=GedOLszVOo4
+
+1-npm i eslint -g
+2-eslint init
+3-modified eslintrc file
+4- installed npx install-peerdeps --dev eslint-config-react-app
+5-npm i -D eslint-config-prettier eslint-plugin-prettier prettier
+6-{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["react-app", "prettier"],
+  "plugins": ["react", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "trailingComma": "es5",
+        "semi": false,
+        "jsxSingleQuote": true,
+        "singleQuote": true,
+        "useTabs": true
+      }
+    ]
+  }
+}
+

@@ -66,6 +66,25 @@
 1-google fonts url in css
 2-react-icons
 
+-- Template
+1-background image
+2-modal
+3-accordion
+4-grid
+5-natour
+6-sticky
+7-typer
+8-wavy
+9-tabs
+10-rolling button homedepot
+11-slideshow
+12-sliding checkbox slidingcheck
+13-overlay
+14-ccurtain menu
+15-Misc
+16-all navbar
+17-html 62%
+
 -- Plan
 Axios (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Password generator (brad YouTube) xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

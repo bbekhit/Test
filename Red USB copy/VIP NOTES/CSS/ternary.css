@@ -24,3 +24,5 @@ params: { token },
 }
 
 /* https://uigradients.com/#ViceCity */
+
+/* <Route exact path="/" component={() => (<div>Home</div>)} */
