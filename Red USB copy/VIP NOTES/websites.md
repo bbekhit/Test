@@ -230,7 +230,11 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://uigradients.com/#ViceCity
 
 - ## CSS HTML entities
+
   https://css-tricks.com/snippets/html/glyphs/
+
+- ## Loaders spinners
+  https://loading.io/css/
 
 ## REACT
 
@@ -301,6 +305,11 @@ https://www.youtube.com/watch?v=bfyI9yl3qfE
   https://github.com/siffogh/drag-and-drop-article/blob/master/src/App.js
   https://www.freecodecamp.org/news/how-to-make-and-test-your-own-react-drag-and-drop-list-with-0-dependencies-6fb461603780/
 
+- ## infinite scroll
+
+  https://alligator.io/react/react-infinite-scroll/
+  https://github.com/aleckan53/infinite-scroll
+
 - ## updating state VIP VIP
 
   https://linguinecode.com/post/why-react-setstate-usestate-does-not-update-immediately
@@ -335,3 +344,21 @@ https://kriss.io/amazon-ui-clone-with-react-native-3-drawer-menu/
 ## free APIs
 
 https://rapidapi.com/collection/list-of-free-apis
+
+## testing
+
+https://medium.com/asos-techblog/how-to-test-your-react-redux-application-48d90481a253
+https://willowtreeapps.com/ideas/best-practices-for-unit-testing-with-a-react-redux-approach
+https://michalzalecki.com/testing-redux-thunk-like-you-always-want-it/
+https://www.youtube.com/watch?v=Ngj2f1n9pUw and clean useEffect VIP
+https://medium.com/@netxm/test-async-redux-actions-jest-e703add2cf91
+https://www.youtube.com/watch?v=eSzRt9fFoiw
+https://stackoverflow.com/questions/47043654/how-to-test-an-action-creator-with-a-fetch-api-request
+https://www.robinwieruch.de/axios-jest
+
+https://stackoverflow.com/questions/45016033/how-do-i-test-axios-in-jest
+https://stackoverflow.com/questions/57660014/specify-url-in-axios-mock
+
+## testing coverage
+
+https://medium.com/swlh/react-testing-using-jest-along-with-code-coverage-report-7454b5ba0236
