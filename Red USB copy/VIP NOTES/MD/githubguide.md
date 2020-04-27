@@ -106,6 +106,11 @@
 10-reload fixes in App.js
 11-guestOnly private route
 12-privateRoute in private-route-and-reload-fix
+13-testing branch
+14-redux-persist
+15-slug
+16-Promise version of comparePassword(stephen grider, User)
+17-using cookie instead of authorization
 
 - PrivateRoute component as Brad and then <Redirect to='/'> in Login and signup
 - one component as in HOC/private routing

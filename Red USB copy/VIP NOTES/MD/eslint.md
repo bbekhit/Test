@@ -150,27 +150,32 @@ target will let eslint to run prettier for js filles then prettier format rest o
 4- installed npx install-peerdeps --dev eslint-config-react-app
 5-npm i -D eslint-config-prettier eslint-plugin-prettier prettier
 6-{
-  "env": {
-    "browser": true,
-    "es6": true
-  },
-  "extends": ["react-app", "prettier"],
-  "plugins": ["react", "prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "printWidth": 80,
-        "trailingComma": "es5",
-        "semi": false,
-        "jsxSingleQuote": true,
-        "singleQuote": true,
-        "useTabs": true
-      }
-    ]
-  }
+"env": {
+"browser": true,
+"es6": true
+},
+"extends": ["react-app", "prettier"],
+"plugins": ["react", "prettier"],
+"parserOptions": {
+"ecmaVersion": 2018
+},
+"rules": {
+"prettier/prettier": [
+"error",
+{
+"printWidth": 80,
+"trailingComma": "es5",
+"semi": false,
+"jsxSingleQuote": true,
+"singleQuote": true,
+"useTabs": true
+}
+]
+}
 }
 
+// jonas
+
+- npm i -D prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+- for react
+  npm i -D prettier eslint eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint
