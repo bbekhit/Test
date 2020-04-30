@@ -429,3 +429,16 @@ export const setCurrentUser = (data) => async (dispatch) => {
   }
 };
 
+//// parent child
+exports.getAllReviewsByUser = catchAsync(async (req, res, next) => {
+  const reviews = await Review.find({ user: '5ea791cb1d97e4d0ec9327e9' });
+
+  res.status(200).json({
+    status: 'success',
+    results: reviews.length,
+    data: reviews,
+  });
+});
+// reviews per user this is solved in video 156 with virtual populate
+router.route('/user').get(reviewController.getAllReviewsByUser);
+
