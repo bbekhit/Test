@@ -72,6 +72,10 @@
 -- TOUR_AGENCY
 1-eslint
 
+-- REDUX_SAGA
+1-saga
+2-multi backgroundcolor
+
 -- budget Calculator
 1-google fonts url in css
 2-react-icons
@@ -81,7 +85,7 @@
 2-modal
 3-accordion
 4-grid
-5-natour
+5-natour-sass-css
 6-sticky
 7-typer
 8-wavy
