@@ -442,3 +442,6 @@ exports.getAllReviewsByUser = catchAsync(async (req, res, next) => {
 // reviews per user this is solved in video 156 with virtual populate
 router.route('/user').get(reviewController.getAllReviewsByUser);
 
+// factory with middleware before it 
+// getMe 
+

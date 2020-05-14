@@ -11,31 +11,36 @@ Evaluates operands from left to right.
 For each operand, converts it to boolean. If the result is true, stops and returns the original value of that operand.
 If all operands have been evaluated (i.e. all were false), returns the last operand.
 
-##example
+## example
+
 alert( 1 || 0 ); // 1 (1 is truthy)
 alert( true || 'no matter what' ); // (true is truthy)
 alert( null || 1 ); // 1 (1 is the first truthy value)
 alert( null || 0 || 1 ); // 1 (the first truthy value)
 alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
 
-##example
+## example
+
 let currentUser = null;
 let defaultUser = "John";
 let name = currentUser || defaultUser || "unnamed";
 alert( name ); // selects "John" – the first truthy value
 
-##example -- short circuit evaluation
+## example -- short circuit evaluation
+
 let x;
 true || (x = 1);
 alert(x); // undefined, because (x = 1) not evaluated
 
-##VIP
+## VIP
+
 Precedence of AND && is higher than OR ||
 The precedence of AND && operator is higher than OR ||.
 
 So the code a && b || c && d is essentially the same as if the && expressions were in parentheses: (a && b) || (c && d).
 
-##VIP
+## VIP
+
 let x = 1;
 (x > 0) && alert( 'Greater than zero!' );
 

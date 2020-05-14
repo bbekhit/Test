@@ -363,29 +363,36 @@ i have a branch that isn't updated and have some changes not committed and i wan
 
 - git rebase develop
 
-### fetching one branch 
+### fetching one branch
+
 - git fetch <origin/or master> <branch name>
 - to reset all commits git reset --soft HEAD~1
 
 ### test update
+
 npm test -- -u
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-### NEW COURSE
+---
+
+### NEW COURSE NEW COURSE NEW COURSE NEW COURSE NEW COURSE NEW COURSE NEW COURSE
 
 ### Three stages
+
 1- modified
 2- staged (git add) add to staging area
 3- committed (git commit) added to git database on local machine
 
 ### git help -a
+
 - shows all explanation of commands
 - git help commmit
 
 ### pwd
+
 - shows path of directories ,where we at
 
 ### config
+
 - git config --global --list (check what config exists)
 - check .gitconfig 1-code ~/.gitconfig or 2-open ~/.gitconfig (open .gitconfig file)
 - git config --global user.name "Boutros Bekhit" (setup name)
@@ -394,48 +401,53 @@ npm test -- -u
 - open the Command Palette (⇧⌘P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
 
 ### github
+
 - git repository with web interface
 
 ### steps
+
 - new branch
-1- git pull origin develop
-2- git checkout -b <new branch name>
-3- git add .
-4- git commit -m ""
-5- git pull --rebase origin master
-6- git push origin <new branch name>
-7- create PR
-or
-5- git stash
-6- git pull origin master
-7- git stash apply
-8- git push origin <new branch name>
+  1- git pull origin develop
+  2- git checkout -b <new branch name>
+  3- git add .
+  4- git commit -m ""
+  5- git pull --rebase origin master
+  6- git push origin <new branch name>
+  7- create PR
+  or
+  5- git stash
+  6- git pull origin master
+  7- git stash apply
+  8- git push origin <new branch name>
 
 - changes requested
-1- git add .
-2- git commit --amend
-3- git push -f origin <new branch name>
-or
-2- git commit -m ""
-3- git pull
-4- 
+  1- git add .
+  2- git commit --amend
+  3- git push -f origin <new branch name>
+  or
+  2- git commit -m ""
+  3- git pull
+  4-
 
 ### going back from staged
+
 - git add . ====> go back ====> git rm --cached <file name>(VIP: at the beginning of everything)
 - git commit
-- if files modified after committing ===> go back ====>  git restore <file name>
-- git add . ====>  go back ====>  git restore --staged <file name>
-VIP #git reset one.js ---- works the same as #git restore --staged <file name> ---- video 36
+- if files modified after committing ===> go back ====> git restore <file name>
+- git add . ====> go back ====> git restore --staged <file name>
+  VIP #git reset one.js ---- works the same as #git restore --staged <file name> ---- video 36
 - untracked are in red
 - staged are in green ready to commit
 - modified red(modified but not added to index yet) ===> git restore <file name>
-- modified green(mofified and added to index)  ===> git restore --staged <file name>
+- modified green(mofified and added to index) ===> git restore --staged <file name>
 
 ### git status
+
 - git status -s (shows a shot of the status)
 - A <file name>
 
 ### git log
+
 - git log --oneline
 - git log -3
 - git log <file name> (check commit for one file)
@@ -445,24 +457,25 @@ VIP #git reset one.js ---- works the same as #git restore --staged <file name> -
 - git log --stat --oneline -n 3
 - git log -p --oneline -1 (shows what changed, video 74)
 - git log <directory name> (to see changes in a directory from master branch)(video 74)
-(git log master ===> for remote master logs)(git log origin/master ===> for local master logs)
+  (git log master ===> for remote master logs)(git log origin/master ===> for local master logs)
 - git log --oneline --grep="fix"(find commits with fix word)
 
-
 ### changes inside commit
+
 - git diff 2a70012~ 2a70012
 - git show 2a70012
 - git diff 1e7dbd2^!
 - git log p -3 --oneline
 
-
 ### ls command
+
 - ls -al
 - ls -l
 
 ### branching
+
 - git branch <filename> (create new branch)
-- git branch (local branches only) -a(shows all local and remote branches) -r(remote branches only) 
+- git branch (local branches only) -a(shows all local and remote branches) -r(remote branches only)
 - git checkout <branch name> (to switch to that branch)
 - git checkout -b <new branch name> (to create and switch new branch in one step)
 - git branch -m <old name> <new name> (to rename branch)
@@ -470,26 +483,29 @@ VIP #git reset one.js ---- works the same as #git restore --staged <file name> -
 - git branch -D <branch name> (to delete branch with commits and wasn't merged, forced deleted)
 
 ### diff
+
 - git diff master ff-branch (video 78 2:30)
 - https://stackoverflow.com/questions/6412516/configuring-diff-tool-with-gitconfig
 
 ### merge
+
 - git merge <file name> (i have to be in master branch)
-(if no changes to master before merging so the merge is fast forward)
+  (if no changes to master before merging so the merge is fast forward)
 - best practice before merge: git diff master <branch need to be merged>
 - git merge <file name> --no-ff(result in a merge commit)
 - git merge <file name> -m "message" (3-way merge)
 - https://nvie.com/posts/a-successful-git-branching-model/
 - https://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
-- add *.orig to .gitignore file
+- add \*.orig to .gitignore file
 - git config --global mergetool.keepBackup false
 
 ### Head
+
 - Head is points to last commit
 - video 77
 
-
 ### git checkout
+
 - git checkout 2a70012 ===> will make the Head points to this commit(detached Head) lesson 32
 - ===> go back ===> git checkout master
 - change file ===> git commit -am "" ===> git checkout -b <new branch name> ===> all changes will stay on new branch
@@ -497,25 +513,27 @@ VIP #git reset one.js ---- works the same as #git restore --staged <file name> -
 - git checkout 2270bd7 <file name> (goes back to this commit without detach head video 34) ===> go back ===> git checkout Head <file name>
 
 ### revert
+
 - git revert Head(undo changes to files but keep commit history)
 
 ### git reset
-- git reset <file name> get the file back to unstaged area(out of index area) look up at git (### going back from staged)
-- git reset  get all files out of staged area if they are in but the file contents remain the same(all modification will be there) just going back from index stage (same as git restore --staged <filename>)
+
+- git reset <file name> get the file back to unstaged area(out of index area after using <git add .>) look up at git (### going back from staged)("git restore --staged<file name>...")
+- git reset get all files out of staged area if they are in but the file contents remain the same(all modification will be there) just going back from index stage (same as git restore --staged <filename>)
 - git reset --hard (remove everything, out of staging area + clear all changes)(goes back to last commit)
 - git reset 2a70012 (get back to this commit id and unstage all changes after this commit)
 - git reset --hard 2a70012 (get back to this commit and delete all changes after it asif nothing)(video 38)
 - git reset --hard (is a one step to git restore --staged <file name> then git restore <file name>)
 
-git reset  ==============================================================================  git checkout
+git reset ============================================================================== git checkout
 
 - git reset <file name> works as git restore --staged(go back from git add) ============== no git checkout <file name>
 - git reset resets all file back to unstaged area ========== no git checkout
 - git reset 2270bd7(go back to this commit and after that commit all goes to in modified state) ========= git checkout 2270bd7 ((detached Head))
--- git reset 3d0c9d2 --hard (delete all history after that commit) ======== git checkout 3d0c9d2 <file name> (works as git reset 8d9a2ff)
-
+  -- git reset 3d0c9d2 --hard (delete all history after that commit) ======== git checkout 3d0c9d2 <file name> (works as git reset 8d9a2ff)
 
 ### git clean (untracked)
+
 - git clean -n
 - git clean -f
 - git clean -f <path>
@@ -523,31 +541,51 @@ git reset  =====================================================================
 - git clean -xf (remove untracked and files in .gitignore)
 
 ### git amend
+
 - git commit --amend --no-edit (let us don't update commit message)
 
 ### branch sent by denys
+
 - git fetch origin <branch name>
 
 ### fetch
+
 - origin/master is local copy of remote repo
 - if i have commits on origin/master and i just fetch it i get the commits and not merge it (video 90)
-(- git fetch origin master
- - (in master) git merge origin/master ---- to sync my local master
- - to check commits on a branch before fetching ---- git log --online origin/master
-)
+  (- git fetch origin master
+- (in master) git merge origin/master ---- to sync my local master
+- to check commits on a branch before fetching ---- git log --online origin/master
+  )
 - brings my local copy of remote repo up to date
 
 ### gir remote -v
 
 ### origin/master
+
 - local copy of remote repo
 - git branch -r(will show origin/master)
 - git branch -a(will show master branch)
 
 ### git pull
+
 - git fetch + git merge
-
-
 
 https://www.youtube.com/watch?v=-H2U3kJ_urw vip
 https://www.youtube.com/watch?v=oFYyTZwMyAg conflict
+
+## shortcuts
+
+ <git diff>
+- git diff 2a70012~ 2a70012
+- git show 2a70012
+- git diff 1e7dbd2^!
+- git log p -3 --oneline
+
+<git reset>
+to delete last commit we can reset till the one before it
+- git reset 2a70012 (remove anything after this commit)
+- git reset --hard 2a70012 (destroy anything after this commit)
+- git reset --hard (works before commiting)
+- git reset --hard HEAD^ (removes last commit)
+- git reset --hard HEAd~2 (removes last 2 from top)
+-git update-ref -d HEAD (vip if the one i wan to remove is the initial commit)

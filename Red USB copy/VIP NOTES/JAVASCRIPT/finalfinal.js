@@ -443,7 +443,7 @@ undefined + 1
 "1" == 1 
 true == 1 
 // [] == false 
-"" == false 
+"" == false //vip i convert "" to zero number
 undefined == null 
 // [] + 1 // "1"
 // [] > 0 // false

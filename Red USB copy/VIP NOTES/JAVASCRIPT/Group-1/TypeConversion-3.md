@@ -1,6 +1,7 @@
 ##### type conversion VIP VIP
 
 ## ToNumber
+
 undefined ===> NaN
 null ===> 0
 true and false ===> 1 and 0
@@ -8,13 +9,12 @@ string Whitespaces from the start and end are removed. If the remaining string i
 
 +" " ====> 0
 +("A123") //NaN
-+("   23") //23
++(" 23") //23
 
-alert( Number("   123   ") ); // 123
-alert( Number("123z") );      // NaN (error reading a number at "z")
-alert( Number(true) );        // 1
-alert( Number(false) );       // 0
-
+alert( Number(" 123 ") ); // 123
+alert( Number("123z") ); // NaN (error reading a number at "z")
+alert( Number(true) ); // 1
+alert( Number(false) ); // 0
 
 ## addition exception
 
@@ -24,6 +24,7 @@ alert( 1 + '2' ); // '12' (string to the right)
 alert( '1' + 2 ); // '12' (string to the left)
 
 ## ToBoolean
+
 Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false.
 Other values become true.
 
@@ -42,3 +43,8 @@ alert( Boolean(b) ); // true
 ##notes
 undefined is NaN as a number, not 0.
 "0" and space-only strings like " " are true as a boolean.
+
+// converting the type of other 4 types
+String
+Number ==> (null - 0)(undefined - NaN)("" - depends)(false - 0)
+Boolean ===> (null - false)(undefined - false)("" - false)(0,NaN - false)
