@@ -73,3 +73,9 @@ There’s a little more verbose way to do the same thing – a built-in Boolean 
 
 alert( Boolean("non-empty string") ); // true
 alert( Boolean(null) ); // false
+
+## ??
+let height = 0;
+
+alert(height || 100); // 100
+alert(height ?? 100); // 0

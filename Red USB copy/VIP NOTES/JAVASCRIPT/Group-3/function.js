@@ -96,17 +96,17 @@ if (n < 1) {
   alert( pow(x, n) );
 }
 
-16-// a Function Declaration:
+// 16-// a Function Declaration:
 function sayHi() {
   alert( "Hello" );
 }
 
-17-// a Function expression
-let sayHi = function() {
+// 17-// a Function expression
+let sayHiToMe = function() {
   alert( "Hello" );
 };
 
-18-// Copying a function
+// 18-// Copying a function
 function sayHi() {   // (1) create
   alert( "Hello" );
 }
@@ -129,7 +129,7 @@ function sayHi(name) {
   alert( `Hello, ${name}` );
 }
 
-21-// functions only runs in defined block
+// 21-// functions only runs in defined block
 
 let age = 16; // take 16 as an example
 if (age < 18) {
@@ -146,6 +146,7 @@ if (age < 18) {
   function welcome() {
     alert("Greetings!");
   }
+  welcome()
 }
 
 // Here we're out of curly braces,

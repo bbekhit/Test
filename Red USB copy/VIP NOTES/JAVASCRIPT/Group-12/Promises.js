@@ -1,4 +1,10 @@
-// https://scotch.io/tutorials/javascript-promises-for-dummies
+// https://scotch.io/tutorials/javascript-promises-for-dummies 
+// https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/ 
+// https://github.com/jonasschmedtmann/complete-javascript-course/blob/master/8-asynchronous-JS/final/asynchronous.html 
+// https://www.macadamian.com/learn/javascript-promises-explained/ 
+// https://medium.com/front-end-weekly/callbacks-promises-and-async-await-ad4756e01d90 
+// https://usefulangle.com/post/76/javascript-promises-chaining-and-error-handling
+// is an object that keeps track of an event whether it's completed or not and determines what happens next
 
 // example
 let isMomHappy = false;

@@ -124,6 +124,22 @@ res.increment();
 res.decrement();
 console.log(res.get());
 
+//
+
+function Counter() {
+  let count = 0;
+  this.up = function() {
+    return ++count;
+  };
+  this.down = function() {
+    return --count;
+  };
+}
+let counter = new Counter();
+alert( counter.up() ); // 1
+alert( counter.up() ); // 2
+alert( counter.down() ); // 1
+
 // each callback will enter the callback queue and get pushed to the callstack one by one when call stack is empty, so by using var which has no block-level lexical enviroment so the value of i is the last value, but if using let it will keep the value of i for each iteration or the old school we can use IIFE
 
 // In the past, there were no block-level lexical environment in JavaScript.
@@ -143,3 +159,69 @@ function print() {
     })(i);
   }
 }
+
+// Closure Examples
+function classRoom(){
+  let instructors = ["Colt", "Elie"]
+  return {
+    getInstructors: function(){
+      return instructors.slice()
+    },
+    addInstructors: function(instructor){
+      instructors.push(instructor)
+      return instructors
+    }
+  }
+}
+// in memory instructors = ["Colt", "Elie"] 
+let firstTest = classRoom()
+console.log(firstTest.addInstructors("Bo")); // in memory instructors = ["Colt", "Elie", "Bo"]
+console.log(firstTest.getInstructors()); // in memory instructors = ["Colt", "Elie", "Bo"] got copy
+firstTest.getInstructors().pop(); 
+firstTest.getInstructors().pop();
+console.log(firstTest.getInstructors());
+
+
+////
+function makeCounter() {
+  let count = 0;
+
+  function counter() {
+    return count++;
+  }
+  counter.set = value => count = value;
+  counter.decrease = () => count--;
+  return counter;
+}
+let res = makeCounter()
+alert(res())
+alert(res.set(4)) 
+alert(res.decrease())
+
+/////////////////
+let test = () => console.log("entered test");
+   function once(fn){
+     let count = 0;
+     return function(){
+      if(count > 0) return;
+      fn()
+      count++
+     }
+   }
+  function once(func) {
+    let count = 2;
+    let result;
+    if (typeof func !== 'function') {
+        throw new TypeError('Not a function');
+    }
+    return function(...args) {
+        if (--count > 0)
+            result = func.apply(this, args);
+
+        return result;
+    }
+  }
+   test  = once(test); //write the once function
+
+   console.log(test()); //prints "entered test"
+   console.log(test()); //function is not called and nothing is printed

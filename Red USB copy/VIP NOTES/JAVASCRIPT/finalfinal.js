@@ -31,8 +31,25 @@ function sumTwo(arr, num) {
 console.log(sumTwo([1, 4, 3, 6], 5));
 
 function sumTwo(arr, num) {
+  let result = [];
+  let map = {};
+  for (let item of arr) {
+    if (map[item] !== undefined) {
+      result.push(arr.indexOf(map[item]), arr.indexOf(item));
+    } else {
+      map[num - item] = item;
+    }
+  }
+  return result;
+}
+console.log(sumTwo([1, 3, 4, 7, 5, 9], 5));
+
+
+function sumTwo(arr, num) {
   for (let i = 0; i < arr.length; i++) {
+    console.log('i',i)
     for (let j = i + 1; j < arr.length; j++) {
+      console.log('j', j)
       if (arr[i] + arr[j] === num) return [arr[i], arr[j]];
     }
   }
@@ -46,6 +63,14 @@ function mySort(arr) {
   for (let item of arr) {
     map[item] = (map[item] || 0) + 1;
   }
+  // map = arr.reduce((acc,value) => {
+  //   if(acc[value]){
+  //     acc[value]++
+  //   }else{
+  //     acc[value] = 1
+  //   }
+  //   return acc
+  // }, {})
   return arr.sort((a, b) => {
     if (map[a] > map[b]) return 1;
     else if (map[b] > map[a]) return -1;
@@ -70,6 +95,16 @@ function removeDup(arr) {
   return test
 }
 console.log(removeDup([1, 2, 3, 3, 2, 1, 1, 6, 7, 6, 8]));
+
+
+function myFilter(arr){
+  let res = arr.filter((item,i,self) => self.indexOf(item) !== i);
+  // return res; [2,4,3]
+  // return arr.filter(item => !res.includes(item)); // [1,5] 
+  return arr.filter(item => res.includes(item)); // [ 2, 3, 4, 2, 4, 3 ] 
+}
+console.log(myFilter([1,2,3,4,2,4,3,5]));
+
 
 // 4*************************
 function inter(arr1, arr2) {
@@ -103,6 +138,13 @@ function rot(arr, arr1) {
 
 rot([1, 2, 3, 4], [1, 2]);
 
+function rot(arr,arr1){
+  for(let num of arr1){
+    let tail = arr.splice(-num)
+    arr.unshift(...tail)
+  }
+  return arr;
+}
 // 6************************************
 function sortOdd(arr) {
   let odds = arr.filter(item => item % 2 !== 0).sort((a, b) => a - b);
@@ -164,6 +206,15 @@ function mostOccurence(arr) {
   }
   return most;
 }
+
+function mostOccurence(arr){
+  return arr.reduce((acc, value, index) => {
+      acc[value] ? acc[value] += 1 : acc[value] = 1;
+      if(acc[value] > acc.most[1]) acc.most = [value, acc[value]]
+      if(index === arr.length - 1) return acc.most[0];
+      return acc;
+  }, {most:[0,0]})
+}
 console.log(mostOccurence([2, 3, 4, 5, 6, 2, 2, 5, 2, 5]));
 
 // 10*************************************
@@ -172,6 +223,7 @@ function flatten(arr) {
   for (let item of arr) {
     if (Array.isArray(item)) {
       result = result.concat(flatten(item));
+      result.push(...flatten(item))
     } else {
       result.push(item);
     }
@@ -194,6 +246,15 @@ function factorial(num) {
   }
   return result;
 }
+
+function fac(num){
+  let res = 1;
+  for(let i = num; num > 0; num--){
+    res *= num
+  }
+  return res;
+}
+console.log(fac(0));
 
 function fac(num) {
   if (num < 0) return 0;
@@ -481,12 +542,36 @@ let obj = {
 let obj = {
   name: "Boutros",
   getName: function () {
+    setTimeout(() => {
+      console.log(this.name);
+    }, 1000);
+  }
+}; // fix-1
+
+let obj = {
+  name: "Boutros",
+  getName: function () {
     let that = this;
     setTimeout(function () {
       console.log(that.name);
     }, 1000);
   }
-}; //fix
+}; // fix-2
+
+function Person(){
+  // let this = {}; 
+  // let that = this // fix-1
+  this.age = 0;
+  setInterval(function(){
+    this.age++
+    // that.age++ // fix-1
+  }, 1000)
+  // setInterval(() => {
+  //   this.age++
+  // }, 1000) // fix-2
+  // return this; 
+}
+let user = new Person();
 
 // 22********************************************************
 var x = 3;
@@ -902,6 +987,7 @@ function rot13(str) {
 // so the element can sit next to other elements
 
 // 42*************************************************8
+// https://medium.com/javascript-in-plain-english/5-tricky-javascript-problems-to-check-before-your-next-interview-part-1-60fdecaa59d6 
 function print() {
   for (var i = 0; i <= 5; i++) {
     (function (j) {
@@ -932,6 +1018,21 @@ function print(a, b){
   },1000)
  }
 
+//  https://javascript.info/closure 
+ function makeArmy() {
+  let shooters = [];
+  for(let i = 0; i < 10; i++) {
+    let shooter = function() { // shooter function
+      alert( i ); // should show its number
+    };
+    shooters.push(shooter);
+  }
+  return shooters;
+}
+let army = makeArmy();
+army[0](); // 0
+army[5](); // 5
+
 // 43*********************************************************
 let fruits = [
   { color_id: 1, name: "strawbery" },
@@ -956,6 +1057,7 @@ fruits.forEach(fruit =>
   outData.push({
     id: fruit.color_id,
     color: colors.filter(color => color.id === fruit.color_id)[0].color,
+    // color: colors.find(color => color.id === fruit.color_id).color,
     name: fruit.name
   })
 );
@@ -1577,6 +1679,7 @@ function sumInput() {
     let value = prompt("A number please?", 0);
     // should we cancel?
     if (value === "" || value === null || !isFinite(value)) break;
+    if (!value || !isFinite(value)) break;
     numbers.push(+value);
   }
   let sum = 0;
@@ -1624,6 +1727,12 @@ function getAge(dob){
 }
 function getAge(dob){
   return  moment().diff(dob, 'years');
+}
+
+// 74`
+function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+  return date.getDate();
 }
 
 // 75 hours passed since beging
@@ -1696,6 +1805,10 @@ alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
 // yesterday's date like 31.12.2016, 20:00
 alert( formatDate(new Date(new Date - 86400 * 1000)) );
 
+/////
+let ms = Date.parse('2012-01-26T13:51:50.417-07:00');
+alert(ms); // 1327611110417  (timestamp)
+
 // 77 - 
 function aclean(arr) {
   let map = new Map();
@@ -1719,6 +1832,23 @@ function aclean(arr) {
 }
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 alert( aclean(arr) );
+
+function aclean(arr) {
+  let map = {};
+  // let map = new Map();
+  for (let word of arr) {
+    // split the word by letters, sort them and join back
+    let sorted = word.toLowerCase().split("").sort().join(""); // (*)
+    map[sorted] = word;
+    // map.set(sorted, word);
+  }
+
+  return Object.values(map);
+  // return Array.from(map.values());
+}
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+console.log(aclean(arr));
+
 
 // 78
 Function.prototype.defer = function(ms) {
@@ -1804,3 +1934,40 @@ const cloneOriginal = {...original}
 cloneOriginal.fullName.firstName = "Will"
 console.log(original)
 
+// 
+function sumSalaries(obj) {
+  let arr = Object.values(obj);
+  return arr.reduce((acc, nextValue) => acc + nextValue, 0);
+  // let sum = 0;
+  // for (let key in obj) {
+  //   sum += obj[key];
+  // }
+  // return sum;
+}
+let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+console.log(sumSalaries(salaries)); // 650
+
+// 
+function topSalary(salaries) {
+  let max = 0;
+  let maxName = null;
+  for(const [name, salary] of Object.entries(salaries)) {
+    if (max < salary) {
+      max = salary;
+      maxName = name;
+    }
+  }
+  return maxName;
+}
+
+//
+if (!String.prototype.repeat) { // if there's no such method
+  String.prototype.repeat = function(n) {
+    return new Array(n + 1).join(this);
+  };
+}
+alert( "La".repeat(3) ); // LaLaLa

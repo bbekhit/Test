@@ -1,3 +1,6 @@
+//
+// Regular numbers in JavaScript are stored in 64-bit format 
+
 // 1
 1e3 = 1 * 1000
 1.23e6 = 1.23 * 1000000
@@ -36,6 +39,10 @@ Math.trunc //(//not supported by Internet Explorer)
 //Removes anything after the decimal point without rounding: 3.1 becomes 3, -1.1 becomes -1.
 
 // C************** toFixed(n) returns a string VIP VIP VIP VIP
+// 2 ways to round numbers 1-multiply&divide 2-toFixed()
+let num = 1.23456;
+alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23
+
 let num = 12.34;
 alert( num.toFixed(1) ); // "12.3"
 
@@ -108,3 +115,45 @@ var random = Math.floor(Math.random() * colors.length)
 5/0 // infinity
 2**1024 // infinity
 
+// Compare with Object.is
+// There is a special built-in method Object.is that compares values like ===, but is more reliable for two edge cases:
+
+// It works with NaN: Object.is(NaN, NaN) === true, that’s a good thing.
+// Values 0 and -0 are different: Object.is(0, -0) === false, technically that’s true, because internally the number has a sign bit that may be different even if all other bits are zeroes.
+// In all other cases, Object.is(a, b) is the same as a === b. 
+
+// summary summary summary summary summary 
+
+// 1- 
+let billion = 1e9
+
+// 2-
+let res = billion.toString(10) //"1000000000"
+
+// 3-
+parseInt(res) // 1e9
+
+// 4-
+let test = 0.1 + 0.2 === 0.3000000004 // true
+(0.1*10 + 0.2*10)/10 //0.3
++test.toFixed(1)
+
+// 5-
+Math.floor
+Math.ceil
+Math.round
+Math.trunc
+
+// 6-
+isNaN()
+isFinite()
+
+// 7-
+Object.is(NaN, NaN) === true
+Object.is(a,b) 
+a === b
+
+// 8-
+alert( 1.35.toFixed(1) ); // 1.4
+alert( 6.35.toFixed(1) ); // 6.3 which is wrong to fix it
+alert( Math.round(6.35 * 10) / 10); // 6.35 -> 63.5 -> 64(rounded) -> 6.4

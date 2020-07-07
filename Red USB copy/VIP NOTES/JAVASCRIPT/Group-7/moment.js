@@ -9,31 +9,31 @@ const filtersReducerDefaultState = {
   endDate: moment().endOf('month')
 };
 
-export default (expenses, { text, sortBy, startDate, endDate }) => {
-  return expenses.filter((expense) => {
-    const createdAtMoment = moment(expense.createdAt);
-    const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
-    const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
-    const textMatch = expense.description.toLowerCase().includes(text.toLowerCase());
+// export default (expenses, { text, sortBy, startDate, endDate }) => {
+//   return expenses.filter((expense) => {
+//     const createdAtMoment = moment(expense.createdAt);
+//     const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
+//     const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
+//     const textMatch = expense.description.toLowerCase().includes(text.toLowerCase());
 
-    return startDateMatch && endDateMatch && textMatch;
-  })
+//     return startDateMatch && endDateMatch && textMatch;
+//   })
 
-  export default (expenses, { text, sortBy, startDate, endDate }) => {
-    return expenses.filter((expense) => {
-      const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
-      const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
-      const textMatch = expense.description.toLowerCase().includes(text.toLowerCase());
+  // export default (expenses, { text, sortBy, startDate, endDate }) => {
+  //   return expenses.filter((expense) => {
+  //     const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
+  //     const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
+  //     const textMatch = expense.description.toLowerCase().includes(text.toLowerCase());
   
-      return startDateMatch && endDateMatch && textMatch;
-    }).sort((a, b) => {
-      if (sortBy === 'date') {
-        return a.createdAt < b.createdAt ? 1 : -1;
-      } else if (sortBy === 'amount') {
-        return a.amount < b.amount ? 1 : -1;
-      }
-    });
-  };
+  //     return startDateMatch && endDateMatch && textMatch;
+  //   }).sort((a, b) => {
+  //     if (sortBy === 'date') {
+  //       return a.createdAt < b.createdAt ? 1 : -1;
+  //     } else if (sortBy === 'amount') {
+  //       return a.amount < b.amount ? 1 : -1;
+  //     }
+  //   });
+  // };
   
 // ***************PARSING*******************
 
@@ -85,3 +85,13 @@ moment().startOf('year');
 moment().month(0).date(1).hours(0).minutes(0).seconds(0).milliseconds(0);
 
 // *****************************Displaying**********************************
+var a = moment('2016-06-06T21:03:55');//now
+var b = moment('2016-05-06T20:03:55');
+
+console.log(a.diff(b, 'minutes')) // 44700
+console.log(a.diff(b, 'hours')) // 745
+console.log(a.diff(b, 'days')) // 31
+console.log(a.diff(b, 'weeks')) // 4
+
+let isToday = moment(0, "HH").diff(date, "days") == 0;
+isToday = date => moment(0,"HH").diff(date, "days") == 0;

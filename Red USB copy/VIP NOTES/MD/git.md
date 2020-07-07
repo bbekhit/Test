@@ -1,4 +1,4 @@
-const DATA_DIR = "C:/gdrive/avails_dev/Commercials/";
+const DATA_DIR = "C:/gdrive/avails_dev/Commercials/"; 
 
 <!-- https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion -->
 
@@ -589,3 +589,24 @@ to delete last commit we can reset till the one before it
 - git reset --hard HEAD^ (removes last commit)
 - git reset --hard HEAd~2 (removes last 2 from top)
 -git update-ref -d HEAD (vip if the one i wan to remove is the initial commit)
+
+### Final steps
+  1- git pull origin develop
+  2- git checkout -b <new branch name>
+  3- git add .
+  4- git commit -m ""
+  5- git pull --rebase origin master
+  6- git push origin <new branch name>
+  7- create PR
+
+- changes requested
+  1- made changes
+  2- git commit --amend or git commit -am "new message"(need to squash before merge VIP)
+  3- git pull --rebase origin master 
+  3- git push -f origin <new branch name>
+
+- untracked
+git stash --include-untracked
+
+- stash show
+git stash show -p stash@{1}

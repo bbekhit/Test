@@ -1,5 +1,5 @@
 alert("hello");
-prompt("What is your age", 0);
+prompt("What is your age", 0); // string or null
 confirm("What are you going to do"); // true false
 
 export const deleteAccount = () => (dispatch) => {

@@ -83,3 +83,27 @@ function count(str) {
   }, {});
 }
 console.log(count("hello"));
+
+// 
+function map(array, callback) {
+  let index = -1;
+  const length = array == null ? 0 : array.length;
+  const result = [];
+
+  while (++index < length) {
+      result[index] = callback(array[index], index, array);
+  }
+  return result;
+}
+
+//
+const codes = ["en", "fr" ,"de", "ta"];
+   //result
+  //  {"lang-en": true, "lang-fr": true, "lang-de": true, "lang-ta": true};
+console.log(codes.reduce((acc,value) => {
+  let key = `lang-${value}`
+  acc[key] = true
+  return acc;
+}, {}));
+let result = {};
+codes.forEach(code => result['lang-'+code] = true);

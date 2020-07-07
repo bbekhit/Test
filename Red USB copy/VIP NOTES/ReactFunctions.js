@@ -446,3 +446,42 @@ const GoalItem = props => {
   onDelete={() => onRemoveHandle(itemData.item.id)} //{onRemoveHandle}
   id={itemData.item.id}
 />;
+
+///
+handleChange = testId => event => {
+  this.setState({ [testId]: event.target.value });
+};
+<TextField
+  id="TestID"
+  label="Test ID"
+  className={classes.longTextField}
+  value={testId}
+  onChange={this.handleChange('testId')}
+  margin="none"
+/>
+/////
+onCheckChange = value => () => {
+  const { checked } = this.state;
+  const currentIndex = checked.indexOf(value);
+  const newChecked = [...checked];
+
+  if (currentIndex === -1) {
+    newChecked.push(value);
+  } else {
+    newChecked.splice(currentIndex, 1);
+  }
+  this.setState(
+    {
+      checked: newChecked
+    },
+    () => {
+      this.props.setTypesFilter(this.state.checked);
+    }
+  );
+};
+<input
+  type="checkbox"
+  onChange={this.onCheckChange(item.name)}
+  checked={this.state.checked.indexOf(item.name) !== -1}
+/>
+/////

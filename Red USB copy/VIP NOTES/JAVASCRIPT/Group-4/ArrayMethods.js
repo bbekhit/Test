@@ -47,6 +47,20 @@ alert(arr.concat([3, 4])); // 1,2,3,4
 alert(arr.concat([3, 4], [5, 6])); // 1,2,3,4,5,6
 // create an array from: arr and [3,4], then add values 5 and 6
 alert(arr.concat([3, 4], 5, 6)); // 1,2,3,4,5,6
+// object
+let arrayLike = {
+  0: "something",
+  length: 1,
+};
+alert(arr.concat(arrayLike)); // 1,2,[object Object]
+
+let arrayLike = {
+  0: "something",
+  1: "else",
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+};
+alert(arr.concat(arrayLike)); // 1,2,something,else
 
 // 5 iterate
 forEach() // for // for .. of
@@ -75,9 +89,9 @@ arr.find; // arr.findIndex
 let users = [
   { id: 1, name: "John" },
   { id: 2, name: "Pete" },
-  { id: 3, name: "Mary" }
+  { id: 3, name: "Mary" },
 ];
-let user = users.find(item => item.id == 1);
+let user = users.find((item) => item.id == 1);
 alert(user.name); // John
 
 // find returns item or undefined
@@ -92,7 +106,7 @@ arr.filter();
 
 // When we need to iterate and return the data for each element – we can use map.
 arr.map();
-let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+let lengths = ["Bilbo", "Gandalf", "Nazgul"].map((item) => item.length);
 alert(lengths); // 5,7,6
 
 arr.sort();
@@ -133,3 +147,102 @@ arr.some(fn) / arr.every(fn); //checks the array.
 
 Array.from();
 // There’s a universal method Array.from that takes an iterable or array-like value and makes a “real” Array from it. Then we can call array methods on it.
+
+// REDUCE
+// 1
+var arr = [
+  { name: "Elie" },
+  { name: "Tim" },
+  { name: "Matt" },
+  { name: "Colt" },
+];
+extractValue(arr, "name"); // ['Elie', 'Tim', 'Matt', 'Colt']
+
+function extractValue(arr, key) {
+  return arr.reduce((acc, nextValue) => {
+    acc.push(nextValue[key]);
+    return acc;
+  }, []);
+}
+function extractValue(arr, key) {
+  let newArr = [];
+  arr.map((item) => {
+    newArr.push(item[key]);
+  });
+  return newArr;
+}
+
+// 2
+vowelCount("I Am awesome and so are you"); // {i: 1, a: 4, e: 3, o: 3, u: 1};
+function vowelCount(str) {
+  let arr = str.toLowerCase().split("");
+  return arr.reduce((acc, nextValue) => {
+    if (/[aeiou]/.test(nextValue)) {
+      if (acc[nextValue] !== undefined) {
+        acc[nextValue]++;
+      } else {
+        acc[nextValue] = 1;
+      }
+    }
+    return acc;
+  }, {});
+}
+
+// 3
+function addKeyAndValue(arr, key, value) {
+  return arr.reduce((acc, nextValue) => {
+    acc.push({
+      [key]: value,
+      name: nextValue.name,
+    });
+    return acc;
+  }, []);
+}
+addKeyAndValue(arr, "title", "Instructor"); //
+
+// 4
+function isEven(val) {
+  return val % 2 === 0;
+}
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+partition(arr, isEven); // [[2,4,6,8], [1,3,5,7]];
+
+function isLongerThanThreeCharacters(val) {
+  return val.length > 3;
+}
+
+var names = ["Elie", "Colt", "Tim", "Matt"];
+
+partition(names, isLongerThanThreeCharacters); // [['Elie', 'Colt', 'Matt'], ['Tim']]
+
+function partition(arr, callback) {
+  let res;
+  let trueArr = [];
+  let falseArr = [];
+  return arr.reduce((acc, nextValue) => {
+    res = callback(nextValue);
+    if (res) {
+      trueArr.push(nextValue);
+    } else {
+      falseArr.push(nextValue);
+    }
+    acc = [trueArr, falseArr];
+    return acc;
+  }, []);
+}
+
+function partition(arr, callback) {
+  return arr.reduce(
+    function (acc, next) {
+      if (callback(next)) {
+        acc[0].push(next);
+      } else {
+        acc[1].push(next);
+      }
+      return acc;
+    },
+    [[], []]
+  );
+}

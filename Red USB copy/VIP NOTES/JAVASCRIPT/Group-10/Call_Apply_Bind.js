@@ -2,9 +2,32 @@
 
 // fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
 
+function list() {
+  return Array.prototype.slice.call(arguments);
+}
+// We take (borrow) a join method from a regular array ([].join) and use [].join.call to run it in the context of arguments.
+
+// Why does it work?
+
+// That’s because the internal algorithm of the native method arr.join(glue) is very simple.
+
+// Taken from the specification almost “as-is”:
+
+// Let glue be the first argument or, if no arguments, then a comma ",".
+// Let result be an empty string.
+// Append this[0] to result.
+// Append glue and this[1].
+// Append glue and this[2].
+// …Do so until this.length items are glued.
+// Return result.
+// So, technically it takes this and joins this[0], this[1] …etc together. It’s intentionally written in a way that allows any array-like this (not a coincidence, many methods follow this practice). That’s why it also works with this=arguments. 
+
 // https://www.freecodecamp.org/news/how-to-use-the-apply-call-and-bind-methods-in-javascript-80a8e6096a90/
 
 // https://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind
+
+// https://medium.com/@TCAS3/debounce-deep-dive-javascript-es6-e6f8d983b7a1
+// https://www.youtube.com/watch?v=F2zF8fu7aG0  --- vip debounce explained 
 
 // Example
 function Person(name){
@@ -89,3 +112,30 @@ var person1 = {
   lastName: "Doe"
 }
 person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+
+// Examples
+let arr = [1,2,3,4]
+Math.max.apply(null, arr) // null, undefined, Math
+// i want to run the function on parameters and don't care about context
+// https://stackoverflow.com/questions/21255138/how-does-the-math-max-apply-work
+
+let arr = [1,2,3]
+let arr1 = [4,5]
+arr.push.apply(arr, arr1)
+arr.push.call(arr, ...arr1)
+// i setup this to -arr- then i need arguments to push it
+
+Array.prototype.slice.call(arguments)
+Array.prototype.slice.apply(arguments)
+
+function add(...args){
+  // let args = Array.prototype.slice.call(arguments)
+  // let args = [...arguments]; 
+  return args.reduce((acc, value) => acc + value, 0 )
+}
+console.log(add(1,2,3,4,5));
+
+// debounce
+// scrolling or resizing or searching 
+// don't want it to trigger too often

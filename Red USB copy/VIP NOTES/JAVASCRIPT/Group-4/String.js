@@ -1,3 +1,10 @@
+// The internal format for strings is always UTF-16, it is not tied to the page encoding. 
+
+alert( `The backslash: \\` ); // The backslash: \
+// double backslash in order to see it
+
+alert( `My\n`.length ); // 3
+
 // 1
 let str = "Hello";
 str.test = 5; // (*)
@@ -109,3 +116,36 @@ substring(); // if first parameter is smaller, it will switch it with second par
 split("", 2); // return array of length of 2
 
 str1.localeCompare(str2); // -1 means str2 has to go backwards to str1, so str2>str1
+
+//
+let str = 'As sly as a fox, as strong as an ox';
+let target = 'as'; // let's look for it
+
+let pos = 0;
+while(true){
+  let foundPos = str.indexOf(target,pos)
+  if(foundPos === -1) break;
+  alert(`Found at position ${foundPos}`)
+  pos = foundPos + 1
+}
+
+
+// SUMMARY
+str.length
+
+str[0] // new undefined
+str.charAt(0) // old empty str
+
+str.toUpperCase()
+str.toLowerCase()
+
+str.indexOf()
+str.includes()
+
+str.startsWith()
+str.endsWith()
+
+str.slice()
+
+str.trim() 
+str.repeat(3)
