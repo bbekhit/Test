@@ -4,6 +4,7 @@
 // Alone, this refers to the global object.
 // In a function, this refers to the global object.
 // In a function, in strict mode, this is undefined.
+/////Usually such call is a programming error. If there’s this inside a function, it expects to be called in an object context.///////////
 // In an event, this refers to the element that received the event.
 // Methods like call(), and apply() can refer this to any object.
 

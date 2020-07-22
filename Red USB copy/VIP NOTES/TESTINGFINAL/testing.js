@@ -19,3 +19,19 @@ Enzyme.configure({adapter: new Adapter()})
 
 
 // describe is contructor in jest
+
+steps :
+// 1- npm i -D jest (now you can start testing like add function Andrew Mead)
+// 2- to start test components and snapshots  will use enzyme:
+//   - npm i -S enzyme enzyme-adapter-react-16 enzyme-to-json
+//   - make a setupTests.js file
+//   - in package.json modify jest 
+
+//   "jest": {
+//     "setupFiles": [
+//       "raf/polyfill",
+//       "<rootDir>/src/tests/setupTests.js"
+//     ],
+//     "snapshotSerializers": [
+//       "enzyme-to-json/serializer" // this for toJson library not to wrap all components
+//     ]

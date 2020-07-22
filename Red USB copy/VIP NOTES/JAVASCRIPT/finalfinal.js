@@ -467,47 +467,47 @@ var foo = function foo() {
 foo();
 
 // 19****************************************
-"1" - -"1";
-console.log(1 + "2" + "2");
-console.log(1 + +"2" + "2");
-console.log(1 + -"1" + "2")
-console.log(+"1" + "1" + "2");
-console.log("A" - "B" + "2"); 
-console.log("A" - "B" + 2);
-5 > 4;
-"apple" > "pineapple"
-"2" > "12"
-undefined == null
-undefined === null
-null == "\n0\n" 
-null === +"\n0\n"
-undefined > 0 
-undefined < 0 
-undefined == 0 
-null > 0
-null == 0 
-null >= 0
-"" + 1 + 0
-"" - 1 + 0
-true + false
-6 / "3"
-"2" * "3"
-4 + 5 + "px"
-"$" + 4 + 5
-"4" - 2
-"4px" - 2
-7 / 0
-"  -9  " + 5
-"  -9  " - 5
-null + 1
-undefined + 1
-"1" == 1 
-true == 1 
-// [] == false 
-"" == false //vip i convert "" to zero number
-undefined == null 
+alert("1" - -"1");
+alert(1 + "2" + "2");
+alert(1 + +"2" + "2");
+alert(1 + -"1" + "2")
+alert(+"1" + "1" + "2");
+alert("A" - "B" + "2"); 
+alert("A" - "B" + 2);
+alert(5 > 4);
+alert("apple" > "pineapple")
+alert("2" > "12")
+alert(undefined == null)
+alert(undefined === null)
+alert(null == "\n0\n") 
+alert(null === +"\n0\n")
+alert(undefined > 0 )
+alert(undefined < 0) 
+alert(undefined == 0) 
+alert(null > 0)
+alert(null == 0) 
+alert(null >= 0)
+alert("" + 1 + 0)
+alert("" - 1 + 0)
+alert(true + false)
+alert(6 / "3")
+alert("2" * "3")
+alert(4 + 5 + "px")
+alert("$" + 4 + 5)
+alert("4" - 2)
+alert("4px" - 2)
+alert(7 / 0)
+alert("  -9  " + 5)
+alert("  -9  " - 5)
+alert(null + 1)
+alert(undefined + 1)
+alert("1" == 1) 
+alert(true == 1) 
+alert("" == false) //vip i convert "" to zero number
+alert(undefined == null) 
 // [] + 1 // "1"
 // [] > 0 // false
+// [] == false 
 // 21***************************************************
 var myObject = {
   foo: "bar",

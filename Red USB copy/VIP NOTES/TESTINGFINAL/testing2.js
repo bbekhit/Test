@@ -53,3 +53,57 @@ test("shows a ListBox component", () => {
 //shallow return the component with out children
 //mount    return the component with full access
 // static render component and plain text
+
+
+////
+// https://blog.jmtalarn.com/running-node-js-react-tests-same-project/ 
+// https://gist.github.com/wldcordeiro/6dc2eb97a26a52d548ed4aa86f2fc5c0 
+// https://stackoverflow.com/questions/47192083/how-do-you-setup-multiple-jest-configs-within-a-single-project
+// https://github.com/facebook/jest/issues/6509
+
+//
+// "jest": {
+//   "collectCoverageFrom": [
+//     "src/**/*.{js,jsx,ts,tsx}",
+//     "!src/**/*.d.ts"
+//   ],
+//   "resolver": "jest-pnp-resolver",
+//   "setupFiles": [
+//     "react-app-polyfill/jsdom"
+//   ],
+//   "testMatch": [
+//     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+//     "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+//   ],
+//   "testEnvironment": "jsdom",
+//   "testURL": "http://localhost",
+//   "transform": {
+//     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+//     "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+//     "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+//   },
+//   "transformIgnorePatterns": [
+//     "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+//     "^.+\\.module\\.(css|sass|scss)$"
+//   ],
+//   "moduleNameMapper": {
+//     "^react-native$": "react-native-web",
+//     "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+//   },
+//   "moduleFileExtensions": [
+//     "web.js",
+//     "js",
+//     "web.ts",
+//     "ts",
+//     "web.tsx",
+//     "tsx",
+//     "json",
+//     "web.jsx",
+//     "jsx",
+//     "node"
+//   ],
+//   "watchPlugins": [
+//     "/Users/aabramets/Projects/e2e-api/client/node_modules/jest-watch-typeahead/filename.js",
+//     "/Users/aabramets/Projects/e2e-api/client/node_modules/jest-watch-typeahead/testname.js"
+//   ]
+// },

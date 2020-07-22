@@ -610,3 +610,8 @@ git stash --include-untracked
 
 - stash show
 git stash show -p stash@{1}
+
+// removing wrong pushed file in .gitignore
+- git rm -r --cached folder/
+- git commit -m 'removed old folder'
+- git push origin master   # or whatever branch you are using
