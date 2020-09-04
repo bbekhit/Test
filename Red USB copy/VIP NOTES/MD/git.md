@@ -238,10 +238,17 @@ then git pull --rebase origin master (to add the changes on github to my master)
 
 ## Stashing
 
-git stash(to postpone)
+`git stash(to postpone)`
+git stash save "message"
+git stash save "message" -u
 git stash apply(to recall)
+`git stash apply --index` exact restortion keep all modified and staged in their actula state
 git stash list(to see all staches)
 git stash drop(to delete stashes)
+`git stash pop (apply and drop same time)`
+
+vip `git stash branch myTextBranch stash@{0}`
+- create new branch add stashes stash@{0} and then delete stash
 
 for untracked files:
 git stash -u
@@ -607,6 +614,7 @@ to delete last commit we can reset till the one before it
 
 - untracked
 git stash --include-untracked
+git stash -u
 
 - stash show
 git stash show -p stash@{1}
@@ -615,3 +623,8 @@ git stash show -p stash@{1}
 - git rm -r --cached folder/
 - git commit -m 'removed old folder'
 - git push origin master   # or whatever branch you are using
+
+
+- https://www.burntfen.com/2015-10-30/how-to-amend-a-commit-on-a-github-pull-request
+- https://stackoverflow.com/questions/9790448/how-to-update-a-pull-request-from-forked-repo
+- 

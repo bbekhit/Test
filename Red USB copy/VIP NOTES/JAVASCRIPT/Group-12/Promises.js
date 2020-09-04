@@ -321,3 +321,14 @@ router.get('/', auth, async (req, res) => {
 //     console.log(error);
 //   }
 // }
+
+app.post('/grades', (request, response) => {
+  if (Array.isArray(request.body)) {
+      Promise.all(request.body.map(r => {
+          return processor.saveGrade(r.provider, r.data, r.execution_id).then(data => {
+              return { data: data, status: "Success"};
+          });
+      }))
+          .then(results => response.send(results));
+  }
+});

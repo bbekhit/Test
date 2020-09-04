@@ -1,6 +1,8 @@
 // destruction and spread works only on iterables
 // rest used in destruction and function arguments ...args 
 
+import { Server } from "https";
+
 
 // spread operator makes a copy of array that don't affect original array
 let arr = [1,2,3]
@@ -28,6 +30,7 @@ if (true) {
   function sayHi() {
     alert(`${phrase}, ${user}`);
   }
+  sayHi()
 }
 sayHi();
 
@@ -40,6 +43,8 @@ sayHi();
 // - ...spread [...arr], {...obj}
 // - destruction on any iterable 
 // - {...obj} same as Object.assign({}, obj)
+// Object.assign shallow clone first level not changing but nested is changing, deep cloning is completly different objects
+// {...} any nested object will be changed vip vip
 
 // 1
 // isNaN(value) converts its argument to a number and then tests it for being NaN:
@@ -1742,6 +1747,23 @@ alert("Chapter 5.1".match(regexp)); // 5.1
 // find "V", then [o or i], then "la"
 alert("Voila".match(/V[oi]la/)); // null, no matches
 
+// FINAL  EDITION FINAL
+// 1- symbols not converted to string automatically and doesn't appear in for..in
+// 2- let arr = new Array(2) arr // [2 * undefined]
+// 3- Array.from() takes any iterable or array-like
+// 4-
+function print({name, age = 40}){
+  console.log(`my name is ${name} and I am ${age} years old`)
+}
+print({name:"Boutros"})
+// 5-
+str[0] // new undefined
+str.charAt(0) // old empty str
+// 6- JSON
+// Function properties (methods).
+// Symbolic properties.
+// Properties that store undefined.
+
 
 // client package.json "proxy":"http://localhost:8000/" // 132
 // main package.json "dev": "export DEBUG='test-suite-generator,test-runner,config,common,queue-runner,baseline,server';nodemon $NODE_DEBUG_OPTION server.js",
@@ -1792,3 +1814,8 @@ alert("Voila".match(/V[oi]la/)); // null, no matches
 // rdar://63697389 
 // rdar://60615480 
 // mr95p01if-hyfs04203401.mr.if.apple.com 
+
+
+// localhost:8000/api/signal/create-post/
+// in front-end package.json we use proxy:'http://localhost:8000' so we don't repeat in actions
+// in server.js we use app.use("api/user", users) so we don't repeat in usersRoute.js 
