@@ -986,6 +986,26 @@ function rot13(str) {
 // inline-block does not add a line-break after the element, 
 // so the element can sit next to other elements
 
+/* display:none : occupies no space, no elements here.
+opacity:0 : occupies space, you can click on element behind it.
+visibility:hidden : occupies space and you can not click element behind it. */
+
+/* specifity
+1-stylesheet with important 
+2-inline (inline,id,classes,elements)
+3-id
+4-class, psuedo-class, attribute
+5-tag(element), psuedo-element
+* has specifity of (0,0,0,0)
+if i have 2 classes what ever comes last in styleing sheet will be applied
+section 3 --13 jonath
+will look into importance =====> specifity ====> order
+(inline, id, classes, element)
+(0,0,1,0)
+(0,1,2,2) ==== will win as we go one by one
+(0,0,0,1)
+(0,1,2,1) */
+
 // 42*************************************************8
 // https://medium.com/javascript-in-plain-english/5-tricky-javascript-problems-to-check-before-your-next-interview-part-1-60fdecaa59d6 
 function print() {

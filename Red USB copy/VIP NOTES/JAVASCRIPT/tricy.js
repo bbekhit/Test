@@ -1,6 +1,28 @@
 // destruction and spread works only on iterables
 // rest used in destruction and function arguments ...args 
 
+// 56 see 15 & 48
+Object.keys(); // show on the real object only
+//for..in shows all on the real object and prototype
+// in class the for..in doesn't show the methods on the class but shows on prototype
+
+// Symbolic properties do not participate in for..in loop and Object.keys() ==> yes in Object.assign
+
+// 50
+// The JSON (JavaScript Object Notation) is a general format to represent values and objects.
+// ignore:
+// Function properties (methods).
+// Symbolic properties.
+// Properties that store undefined.
+
+// 57
+// classes always in strict mode
+// for..in doesn't list methods
+
+// As we remember, arrow functions don’t have their own this. Now we know they don’t have the special arguments object either.
+
+
+
 import { Server } from "https";
 
 
@@ -23,7 +45,7 @@ function print(){
 let test = () => "Hello"
 let test = _ => "Hello" // if no parameters i can remove the brackets
 
-// error only lives inside scope of if block
+// error only lives inside scope of if block in strict mode only
 let phrase = "Hello";
 if (true) {
   let user = "John";
@@ -98,6 +120,7 @@ str.chartAt(1000); // "" empty string
 // 7
 // numbers stored in binary form which is sequence of 1 & 0 so the 0.3 is an endless binary fraction .333 and .1 is .11111 but it works with numbers bivided by 2 well
 // that's why it losses precision
+// base from 2 -- 36
 // to fix it
 let ans = 0.1 + 0.2;
 (0.1 * 10 + 0.2 * 10) / 10;
@@ -787,6 +810,40 @@ function Customer(name, lastName, membership) {
 }
 
 Customer.prototype = Object.create(Person.prototype);
+
+function Rabbit(name) {
+  this.name = name;
+}
+Rabbit.prototype.sayHi = function () {
+  alert(this.name);
+};
+let rabbit = new Rabbit("Rabbit");
+rabbit.sayHi(); // Rabbit
+Rabbit.prototype.sayHi(); // undefined
+Object.getPrototypeOf(rabbit).sayHi(); // undefined
+rabbit.__proto__.sayHi(); // undefined
+
+Object.create /////////////////////////////
+let animal = {
+  jumps: true
+}
+let rabbit = Object.create(animal, {
+  name: {
+    value: "rabbit"
+  },
+  age:{
+    value: 13
+  },
+  getName:{
+    value() {
+      return this.name
+    }
+  }
+})
+console.log(rabbit);
+Object.getPrototypeOf(rabbit)
+Object.setPrototypeOf(rabbit, {})
+
 
 // 56 see 15 & 48
 Object.keys(); // show on the real object only
@@ -1764,14 +1821,6 @@ str.charAt(0) // old empty str
 // Symbolic properties.
 // Properties that store undefined.
 
-
-// client package.json "proxy":"http://localhost:8000/" // 132
-// main package.json "dev": "export DEBUG='test-suite-generator,test-runner,config,common,queue-runner,baseline,server';nodemon $NODE_DEBUG_OPTION server.js",
-// https://github.siri.apple.com/aabramets/siri-e2e 
-// https://github.siri.apple.com/siri/signal
-// https://e2e-siri-e2e-dev.usspk05.app.apple.com/ 
-// https://istweb.apple.com/radar-agile 
-
 // - calender
 // https://programmingwithmosh.com/react/build-a-react-calendar-component-from-scratch/
 // https://blog.flowandform.agency/create-a-custom-calendar-in-react-3df1bfd0b728
@@ -1811,11 +1860,14 @@ str.charAt(0) // old empty str
 // https://github.com/sudheerj/reactjs-interview-questions/blob/master/README.md 
 
 
-// rdar://63697389 
-// rdar://60615480 
-// mr95p01if-hyfs04203401.mr.if.apple.com 
-
-
 // localhost:8000/api/signal/create-post/
 // in front-end package.json we use proxy:'http://localhost:8000' so we don't repeat in actions
 // in server.js we use app.use("api/user", users) so we don't repeat in usersRoute.js 
+
+// sumThree
+// combinationString
+// merge
+// maxSubarraySum 
+// stockPrice
+// isSubsequence
+// findLongestSubstring
